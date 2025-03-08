@@ -177,293 +177,116 @@
 </ol>
 <p>Governing Equations of Motion</p>
 <ul>
-<li>A projectile's motion can be split into two components:</li>
-</ul>
-<p>Horizontal motion (x-direction):
-𝑥(𝑡)= 𝑣0 cos(𝜃)⋅𝑡</p>
-<p>Vertical motion (y-direction):
-𝑦(𝑡)=𝑣0sin⁡(𝜃)⋅𝑡−1/2𝑔𝑡2</p>
+<li>
+<p>A projectile's motion can be split into two components:</p>
+</li>
+<li>
+<p>Horizontal motion (x-direction):</p>
+<pre><code>      𝑥(𝑡)=𝑣0cos⁡(𝜃)⋅𝑡
+</code></pre>
+</li>
+<li>
+<p>Vertical motion (y-direction):</p>
+<pre><code>      𝑦(𝑡)=𝑣0sin⁡(𝜃)⋅𝑡−12𝑔𝑡2
+</code></pre>
+</li>
+<li>
 <p>The time of flight (𝑇T) is derived by setting 𝑦(𝑡)=0y(t)=0 (when the projectile hits the ground):</p>
-<p>𝑇=2𝑣0sin⁡(𝜃)𝑔</p>
+<pre><code>      𝑇=2𝑣0sin⁡(𝜃)𝑔
+</code></pre>
+</li>
+<li>
 <p>The horizontal range (𝑅R) is given by:</p>
-<p>𝑅=𝑣0cos(𝜃)⋅𝑇
-R=v 
-0
-​
- cos(θ)⋅T
-Substituting 
-𝑇
-T:</p>
-<h1 id="r">𝑅</h1>
-<p>𝑣
-0
-2
-sin
-⁡
-(
-2
-𝜃
-)
-𝑔
-R= 
-g
-v 
-0
-2
-​
- sin(2θ)
-​</p>
-<p>Effect of Initial Conditions
-Initial Velocity (
-𝑣
-0
-v 
-0
-​
- ): Affects the maximum range; higher 
-𝑣
-0
-v 
-0
-​
-  increases 
-𝑅
-R.
-Gravitational Acceleration (
-𝑔
-g): Affects how fast the projectile falls, reducing 
-𝑅
-R as 
-𝑔
-g increases.
-Launch Angle (
-𝜃
-θ): The range depends on 
-sin
-⁡
-(
-2
-𝜃
-)
-sin(2θ), peaking at 
-𝜃
-=
-45
-∘
-θ=45 
-∘
- .
-2. Analysis of the Range
-The range 
-𝑅
-R as a function of 
-𝜃
-θ follows:
-𝑅
-(
-𝜃
-)
-=
-𝑣
-0
-2
-𝑔
-sin
-⁡
-(
-2
-𝜃
-)
-R(θ)= 
-g
-v 
-0
-2
-​</p>
-<p>​
- sin(2θ)
-It is a parabolic function of 
-sin
-⁡
-(
-2
-𝜃
-)
-sin(2θ), with a maximum at 
-𝜃
-=
-45
-∘
-θ=45 
-∘
- .
-Influence of Parameters
-Initial Velocity (
-𝑣
-0
-v 
-0
-​
- ):
-Doubling 
-𝑣
-0
-v 
-0
-​
-  quadruples the range (
-𝑅
-∝
-𝑣
-0
-2
-R∝v 
-0
-2
-​
- ).
-Gravitational Acceleration (
-𝑔
-g):
-Higher 
-𝑔
-g reduces the range (
-𝑅
-∝
-1
-/
-𝑔
-R∝1/g).
-Angle of Projection (
-𝜃
-θ):
-The range peaks at 
-45
-∘
-45 
-∘
-  and is symmetric about it.
-3. Practical Applications
-Uneven Terrain: Adjust 
-𝑦
-(
-𝑡
-)
-y(t) to account for non-zero launch or landing height:
-𝑦
-(
-𝑡
-)
-=
-𝑦
-0
-+
-𝑣
-0
-sin
-⁡
-(
-𝜃
-)
-⋅
-𝑡
-−
-1
-2
-𝑔
-𝑡
-2
-y(t)=y 
-0
-​
- +v 
-0
-​
- sin(θ)⋅t− 
-2
-1
-​
- gt 
-2</p>
-<p>Solve for 
-𝑇
-T using the quadratic formula, and substitute 
-𝑇
-T into 
-𝑥
-(
-𝑡
-)
-x(t) for the adjusted range.
-Air Resistance: Introduce a drag force proportional to velocity:
-𝐹
-drag
-=
-−
-𝑘
-𝑣
-F 
-drag
-​
- =−kv
-This leads to coupled differential equations, requiring numerical methods for solutions.
-4. Implementation
-Steps for Simulation
-Algorithm:
-Input parameters: 
-𝑣
-0
-v 
-0
-​
- , 
-𝑔
-g, 
-𝜃
-θ, 
-𝑦
-0
-y 
-0
-​
- .
-Calculate range 
-𝑅
-R for various 
-𝜃
-θ values (e.g., from 
-0
-∘
-0 
-∘
-  to 
-90
-∘
-90 
-∘
- ).
-Visualization:
-Plot 
-𝑅
-R vs. 
-𝜃
-θ for different 
-𝑣
-0
-v 
-0
-​
- , 
-𝑔
-g, or 
-𝑦
-0
-y 
-0
-​
- .
-Overlay plots to compare how each parameter influences the range.
-Python Code Example
+<pre><code>      𝑅=𝑣0cos(𝜃)⋅𝑇
+</code></pre>
+<p>Substituting 𝑇:</p>
+<pre><code>      𝑅=𝑣02sin(2𝜃)𝑔
+</code></pre>
+</li>
+</ul>
+<p>Effect of Initial Conditions</p>
+<ul>
+<li>
+<p>Initial Velocity (𝑣0): Affects the maximum range; higher 𝑣0 increases 𝑅.</p>
+</li>
+<li>
+<p>Gravitational Acceleration (g): Affects how fast the projectile falls, reducing 𝑅 as 𝑔 increases.</p>
+</li>
+<li>
+<p>Launch Angle (𝜃): The range depends on sin(2𝜃)sin(2θ), peaking at 𝜃=45∘.</p>
+</li>
+<li>
+<p>Analysis of the Range</p>
+</li>
+<li>
+<p>The range 𝑅 as a function of 𝜃 follows:</p>
+<pre><code>      𝑅(𝜃)=𝑣02𝑔sin(2𝜃)
+</code></pre>
+<ul>
+<li>It is a parabolic function of sin(2𝜃), with a maximum at 𝜃=45∘.</li>
+</ul>
+</li>
+</ul>
+<p>Influence of Parameters</p>
+<ol>
+<li>
+<p>Initial Velocity (𝑣0):</p>
+<ul>
+<li>Doubling 𝑣0 quadruples the range (𝑅∝𝑣02).</li>
+</ul>
+</li>
+<li>
+<p>Gravitational Acceleration (𝑔):</p>
+<ul>
+<li>Higher 𝑔 reduces the range (𝑅∝1/𝑔).</li>
+</ul>
+</li>
+<li>
+<p>Angle of Projection (𝜃):</p>
+<ul>
+<li>The range peaks at 45∘ and is symmetric about it.</li>
+</ul>
+</li>
+<li>
+<p>Practical Applications</p>
+</li>
+<li>
+<p>Uneven Terrain: Adjust 𝑦(𝑡) to account for non-zero launch or landing height:</p>
+<pre><code>      𝑦(𝑡)=𝑦0+𝑣0sin(𝜃)⋅𝑡−12𝑔𝑡2
+</code></pre>
+</li>
+</ol>
+<p>Solve for 𝑇 using the quadratic formula, and substitute 𝑇 into 𝑥(𝑡)x(t) for the adjusted range.</p>
+<ul>
+<li>Air Resistance: Introduce a drag force proportional to velocity:
+              𝐹drag=−𝑘𝑣</li>
+</ul>
+<p>This leads to coupled differential equations, requiring numerical methods for solutions.</p>
+<ol>
+<li>Implementation</li>
+</ol>
+<p>Steps for Simulation</p>
+<ol>
+<li>
+<p>Algorithm:</p>
+</li>
+<li>
+<p>Input parameters: 𝑣0, 𝑔,𝜃,𝑦0.</p>
+</li>
+<li>
+<p>Calculate range 𝑅 for various 𝜃 values (e.g., from 0∘ to 90∘).</p>
+</li>
+<li>
+<p>Visualization:</p>
+</li>
+<li>
+<p>Plot 𝑅 vs. 𝜃 for different 𝑣0, 𝑔, or 𝑦0.</p>
+</li>
+<li>
+<p>Overlay plots to compare how each parameter influences the range.</p>
+</li>
+</ol>
+<p>Python Code Example
 python
 Copy
 Edit
