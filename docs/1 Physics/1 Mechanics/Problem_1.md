@@ -1,304 +1,90 @@
 # Problem 1
+
 1. Theoretical Foundation
 
 Governing Equations of Motion
 
-  - A projectile's motion can be split into two components:
+ - A projectile's motion can be split into two components:
 
-Horizontal motion (x-direction):
-𝑥(𝑡)= 𝑣0 cos(𝜃)⋅𝑡
+   - Horizontal motion (x-direction):
+ 
+              𝑥(𝑡)=𝑣0cos⁡(𝜃)⋅𝑡
 
-Vertical motion (y-direction):
-𝑦(𝑡)=𝑣0sin⁡(𝜃)⋅𝑡−1/2𝑔𝑡2
+   - Vertical motion (y-direction):
 
-The time of flight (𝑇T) is derived by setting 𝑦(𝑡)=0y(t)=0 (when the projectile hits the ground):
+              𝑦(𝑡)=𝑣0sin⁡(𝜃)⋅𝑡−12𝑔𝑡2
 
-𝑇=2𝑣0sin⁡(𝜃)𝑔
+ - The time of flight (𝑇T) is derived by setting 𝑦(𝑡)=0y(t)=0 (when the projectile hits the ground):
 
-The horizontal range (𝑅R) is given by:
+              𝑇=2𝑣0sin⁡(𝜃)𝑔
 
-𝑅=𝑣0cos(𝜃)⋅𝑇
-R=v 
-0
-​
- cos(θ)⋅T
-Substituting 
-𝑇
-T:
+ - The horizontal range (𝑅R) is given by:
 
-𝑅
-=
-𝑣
-0
-2
-sin
-⁡
-(
-2
-𝜃
-)
-𝑔
-R= 
-g
-v 
-0
-2
-​
- sin(2θ)
-​
+              𝑅=𝑣0cos(𝜃)⋅𝑇
+
+    Substituting 𝑇:
+
+              𝑅=𝑣02sin(2𝜃)𝑔
  
 Effect of Initial Conditions
-Initial Velocity (
-𝑣
-0
-v 
-0
-​
- ): Affects the maximum range; higher 
-𝑣
-0
-v 
-0
-​
-  increases 
-𝑅
-R.
-Gravitational Acceleration (
-𝑔
-g): Affects how fast the projectile falls, reducing 
-𝑅
-R as 
-𝑔
-g increases.
-Launch Angle (
-𝜃
-θ): The range depends on 
-sin
-⁡
-(
-2
-𝜃
-)
-sin(2θ), peaking at 
-𝜃
-=
-45
-∘
-θ=45 
-∘
- .
+
+ - Initial Velocity (𝑣0): Affects the maximum range; higher 𝑣0 increases 𝑅.
+
+ - Gravitational Acceleration (g): Affects how fast the projectile falls, reducing 𝑅 as 𝑔 increases.
+
+ - Launch Angle (𝜃): The range depends on sin(2𝜃)sin(2θ), peaking at 𝜃=45∘.
+
 2. Analysis of the Range
-The range 
-𝑅
-R as a function of 
-𝜃
-θ follows:
-𝑅
-(
-𝜃
-)
-=
-𝑣
-0
-2
-𝑔
-sin
-⁡
-(
-2
-𝜃
-)
-R(θ)= 
-g
-v 
-0
-2
-​
- 
-​
- sin(2θ)
-It is a parabolic function of 
-sin
-⁡
-(
-2
-𝜃
-)
-sin(2θ), with a maximum at 
-𝜃
-=
-45
-∘
-θ=45 
-∘
- .
+
+ - The range 𝑅 as a function of 𝜃 follows:
+
+              𝑅(𝜃)=𝑣02𝑔sin(2𝜃)
+
+    - It is a parabolic function of sin(2𝜃), with a maximum at 𝜃=45∘.
+
 Influence of Parameters
-Initial Velocity (
-𝑣
-0
-v 
-0
-​
- ):
-Doubling 
-𝑣
-0
-v 
-0
-​
-  quadruples the range (
-𝑅
-∝
-𝑣
-0
-2
-R∝v 
-0
-2
-​
- ).
-Gravitational Acceleration (
-𝑔
-g):
-Higher 
-𝑔
-g reduces the range (
-𝑅
-∝
-1
-/
-𝑔
-R∝1/g).
-Angle of Projection (
-𝜃
-θ):
-The range peaks at 
-45
-∘
-45 
-∘
-  and is symmetric about it.
+
+  1. Initial Velocity (𝑣0):
+
+    - Doubling 𝑣0 quadruples the range (𝑅∝𝑣02).
+
+  2. Gravitational Acceleration (𝑔):
+
+    - Higher 𝑔 reduces the range (𝑅∝1/𝑔).
+
+  3. Angle of Projection (𝜃):
+
+    - The range peaks at 45∘ and is symmetric about it.
+
 3. Practical Applications
-Uneven Terrain: Adjust 
-𝑦
-(
-𝑡
-)
-y(t) to account for non-zero launch or landing height:
-𝑦
-(
-𝑡
-)
-=
-𝑦
-0
-+
-𝑣
-0
-sin
-⁡
-(
-𝜃
-)
-⋅
-𝑡
-−
-1
-2
-𝑔
-𝑡
-2
-y(t)=y 
-0
-​
- +v 
-0
-​
- sin(θ)⋅t− 
-2
-1
-​
- gt 
-2
- 
-Solve for 
-𝑇
-T using the quadratic formula, and substitute 
-𝑇
-T into 
-𝑥
-(
-𝑡
-)
-x(t) for the adjusted range.
-Air Resistance: Introduce a drag force proportional to velocity:
-𝐹
-drag
-=
-−
-𝑘
-𝑣
-F 
-drag
-​
- =−kv
-This leads to coupled differential equations, requiring numerical methods for solutions.
+
+ - Uneven Terrain: Adjust 𝑦(𝑡) to account for non-zero launch or landing height:
+
+              𝑦(𝑡)=𝑦0+𝑣0sin(𝜃)⋅𝑡−12𝑔𝑡2
+
+   Solve for 𝑇 using the quadratic formula, and substitute 𝑇 into 𝑥(𝑡)x(t) for the adjusted range.
+
+ - Air Resistance: Introduce a drag force proportional to velocity:
+              𝐹drag=−𝑘𝑣
+
+   This leads to coupled differential equations, requiring numerical methods for solutions.
+
 4. Implementation
+
 Steps for Simulation
-Algorithm:
-Input parameters: 
-𝑣
-0
-v 
-0
-​
- , 
-𝑔
-g, 
-𝜃
-θ, 
-𝑦
-0
-y 
-0
-​
- .
-Calculate range 
-𝑅
-R for various 
-𝜃
-θ values (e.g., from 
-0
-∘
-0 
-∘
-  to 
-90
-∘
-90 
-∘
- ).
-Visualization:
-Plot 
-𝑅
-R vs. 
-𝜃
-θ for different 
-𝑣
-0
-v 
-0
-​
- , 
-𝑔
-g, or 
-𝑦
-0
-y 
-0
-​
- .
-Overlay plots to compare how each parameter influences the range.
+
+1. Algorithm:
+
+   - Input parameters: 𝑣0, 𝑔,𝜃,𝑦0.
+
+   - Calculate range 𝑅 for various 𝜃 values (e.g., from 0∘ to 90∘).
+
+2. Visualization:
+   
+   - Plot 𝑅 vs. 𝜃 for different 𝑣0, 𝑔, or 𝑦0.
+
+   - Overlay plots to compare how each parameter influences the range.
+   
 Python Code Example
 python
 Copy
