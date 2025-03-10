@@ -177,6 +177,7 @@
 <h2 id="motivation">Motivation</h2>
 <p>Projectile motion, while seemingly simple, offers a rich playground for exploring fundamental principles of physics. The problem is straightforward: analyze how the range of a projectile depends on its angle of projection. Yet, beneath this simplicity lies a complex and versatile framework. The equations governing projectile motion involve both linear and quadratic relationships, making them accessible yet deeply insightful.</p>
 <p>What makes this topic particularly compelling is the number of free parameters involved in these equations, such as initial velocity, gravitational acceleration, and launch height. These parameters give rise to a diverse set of solutions that can describe a wide array of real-world phenomena, from the arc of a soccer ball to the trajectory of a rocket.</p>
+<hr/>
 <h2 id="theoretical-foundation">Theoretical Foundation</h2>
 <h3 id="governing-equations">Governing Equations</h3>
 <p>The motion of a projectile can be described using the following kinematic equations:</p>
@@ -209,7 +210,8 @@
    $$ R = \frac{v_0^2 \sin(2\theta)}{g} $$</li>
 </ol>
 <p>This equation shows that the range depends on the square of the initial velocity, the sine of twice the angle, and inversely on gravity.</p>
-<h2 id="analysis-of-the-range">Analysis of the Range</h2>
+<hr/>
+<h1 id="2-analysis-of-the-range">2. Analysis of the Range</h1>
 <h3 id="dependency-on-angle">Dependency on Angle</h3>
 <p>The range is maximized when <span class="arithmatex">\( \sin(2\theta) \)</span> is maximized, which occurs at <span class="arithmatex">\( \theta = 45^\circ \)</span>.</p>
 <h3 id="effect-of-other-parameters">Effect of Other Parameters</h3>
@@ -224,7 +226,8 @@
 <p><strong>Launch Height:</strong> For <span class="arithmatex">\( h &gt; 0 \)</span>, the time of flight is longer, increasing the range.</p>
 </li>
 </ul>
-<h2 id="practical-applications">Practical Applications</h2>
+<hr/>
+<h1 id="3-practical-applications">3. Practical Applications</h1>
 <h3 id="real-world-scenarios">Real-World Scenarios</h3>
 <ul>
 <li>
@@ -237,7 +240,8 @@
 <p><strong>Sports:</strong> Understanding ball trajectories in soccer, basketball, etc.</p>
 </li>
 </ul>
-<h2 id="implementation">Implementation</h2>
+<hr/>
+<h1 id="4-implementation">4. Implementation</h1>
 <h3 id="python-simulation">Python Simulation</h3>
 <p>Below is a Python script to simulate and visualize projectile motion:</p>
 <pre><code class="language-python">import numpy as np
@@ -300,6 +304,7 @@ plt.show()
 # Plot range vs angle
 plot_range_vs_angle(v0, h, g)
 </code></pre>
+<hr/>
 <h2 id="deliverables">Deliverables</h2>
 <ol>
 <li>
@@ -312,6 +317,7 @@ plot_range_vs_angle(v0, h, g)
 <p>A discussion of the limitations and potential extensions of the idealized model, such as incorporating air resistance or uneven terrain.</p>
 </li>
 </ol>
+<hr/>
 <h2 id="discussion">Discussion</h2>
 <h3 id="limitations">Limitations</h3>
 <ul>
