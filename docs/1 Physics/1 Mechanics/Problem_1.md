@@ -10,6 +10,15 @@ Projectile motion, while seemingly simple, offers a rich playground for explorin
 
 What makes this topic particularly compelling is the number of free parameters involved in these equations, such as initial velocity, gravitational acceleration, and launch height. These parameters give rise to a diverse set of solutions that can describe a wide array of real-world phenomena, from the arc of a soccer ball to the trajectory of a rocket.
 
+## Deliverables
+1. A Python script implementing the simulation of projectile motion.
+
+2. Detailed description of the family of solutions derived from the governing equations
+
+3. Graphs illustrating the trajectory and range as a function of the angle of projection.
+
+4. A discussion of the limitations and potential extensions of the idealized model, such as incorporating air resistance or uneven terrain.
+
 ---
 
 ## Theoretical Foundation
@@ -143,16 +152,9 @@ plot_range_vs_angle(v0, h, g)
 
  ---
 
-## Deliverables
-1. A Python script implementing the simulation of projectile motion.
+# 5. Discussion
 
-2. Graphs illustrating the trajectory and range as a function of the angle of projection.
-
-3. A discussion of the limitations and potential extensions of the idealized model, such as incorporating air resistance or uneven terrain.
-
- ---
-
-## Discussion
+---
 
 ### Limitations
 - **No Air Resistance:** Assumes a vacuum, leading to an overestimation of range.
