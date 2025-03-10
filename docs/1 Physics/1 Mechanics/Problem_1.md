@@ -34,13 +34,18 @@ The motion of a projectile can be described using the following kinematic equati
 
 Where:
 
+
 - \( x(t) \) and \( y(t) \) are the horizontal and vertical positions at time \( t \), respectively.
+
 
 - \( v_0 \) is the initial velocity.
 
+
 - \( \theta \) is the angle of projection.
 
+
 - \( h \) is the initial height.
+
 
 - \( g \) is the acceleration due to gravity.
 
