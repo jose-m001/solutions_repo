@@ -34,20 +34,15 @@ The motion of a projectile can be described using the following kinematic equati
 
 Where:
 
+- **\( x(t) \) and \( y(t) \) are the horizontal and vertical positions at time \( t \), respectively.
 
-- \( x(t) \) and \( y(t) \) are the horizontal and vertical positions at time \( t \), respectively.
+- **\( v_0 \) is the initial velocity.
 
+- **\( \theta \) is the angle of projection.
 
-- \( v_0 \) is the initial velocity.
+- **\( h \) is the initial height.
 
-
-- \( \theta \) is the angle of projection.
-
-
-- \( h \) is the initial height.
-
-
-- \( g \) is the acceleration due to gravity.
+- **\( g \) is the acceleration due to gravity.
 
 ### Range Derivation
 The horizontal range \( R \) is the distance traveled by the projectile when it returns to the same vertical height as the launch point (\( y = 0 \)).
