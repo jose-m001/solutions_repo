@@ -9,7 +9,7 @@ Projectile motion, while seemingly simple, offers a rich playground for explorin
 
 What makes this topic particularly compelling is the number of free parameters involved in these equations, such as initial velocity, gravitational acceleration, and launch height. These parameters give rise to a diverse set of solutions that can describe a wide array of real-world phenomena, from the arc of a soccer ball to the trajectory of a rocket.
 
-
+---
 
 ## Theoretical Foundation
 
@@ -43,8 +43,9 @@ For a projectile launched from ground level (\( h = 0 \)):
 
 This equation shows that the range depends on the square of the initial velocity, the sine of twice the angle, and inversely on gravity.
 
+---
 
-## Analysis of the Range
+# 2. Analysis of the Range
 
 ### Dependency on Angle
 The range is maximized when \( \sin(2\theta) \) is maximized, which occurs at \( \theta = 45^\circ \).
@@ -56,9 +57,9 @@ The range is maximized when \( \sin(2\theta) \) is maximized, which occurs at \(
 
 - **Launch Height:** For \( h > 0 \), the time of flight is longer, increasing the range.
 
- 
+ ---
 
-## Practical Applications
+# 3. Practical Applications
 
 ### Real-World Scenarios
 - **Uneven Terrain:** The landing point depends on the elevation difference.
@@ -67,9 +68,9 @@ The range is maximized when \( \sin(2\theta) \) is maximized, which occurs at \(
 
 - **Sports:** Understanding ball trajectories in soccer, basketball, etc.
 
+---
 
-
-## Implementation
+# 4. Implementation
 
 ### Python Simulation
 Below is a Python script to simulate and visualize projectile motion:
@@ -136,7 +137,7 @@ plt.show()
 plot_range_vs_angle(v0, h, g)
 ```
 
- 
+ ---
 
 ## Deliverables
 1. A Python script implementing the simulation of projectile motion.
@@ -145,7 +146,7 @@ plot_range_vs_angle(v0, h, g)
 
 3. A discussion of the limitations and potential extensions of the idealized model, such as incorporating air resistance or uneven terrain.
 
- 
+ ---
 
 ## Discussion
 
