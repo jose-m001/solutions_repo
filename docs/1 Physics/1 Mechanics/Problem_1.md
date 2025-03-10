@@ -1,121 +1,164 @@
 # Problem 1
 
-1. Theoretical Foundation
+# 1. Theoretical Foundation
 
-Governing Equations of Motion
+### Projectile Motion Analysis
 
- - A projectile's motion can be split into two components:
+## Motivation
+Projectile motion, while seemingly simple, offers a rich playground for exploring fundamental principles of physics. The problem is straightforward: analyze how the range of a projectile depends on its angle of projection. Yet, beneath this simplicity lies a complex and versatile framework. The equations governing projectile motion involve both linear and quadratic relationships, making them accessible yet deeply insightful.
+
+What makes this topic particularly compelling is the number of free parameters involved in these equations, such as initial velocity, gravitational acceleration, and launch height. These parameters give rise to a diverse set of solutions that can describe a wide array of real-world phenomena, from the arc of a soccer ball to the trajectory of a rocket.
 
 
-   - Horizontal motion (x-direction):
+
+## Theoretical Foundation
+
+### Governing Equations
+The motion of a projectile can be described using the following kinematic equations:
+
+1. **Horizontal Motion:**
+   $$ x(t) = v_0 \cos(\theta) t $$
+
+2. **Vertical Motion:**
+   $$ y(t) = h + v_0 \sin(\theta) t - \frac{1}{2} g t^2 $$
+
+Where:
+- ( x(t) \) and \( y(t) \) are the horizontal and vertical positions at time \( t \), respectively.
+
+- \( v_0 \) is the initial velocity.
+- \( \theta \) is the angle of projection.
+- \( h \) is the initial height.
+- \( g \) is the acceleration due to gravity.
+
+### Range Derivation
+The horizontal range \( R \) is the distance traveled by the projectile when it returns to the same vertical height as the launch point (\( y = 0 \)).
+
+For a projectile launched from ground level (\( h = 0 \)):
+1. Solve for the time of flight \( T \):
+   $$ T = \frac{2 v_0 \sin(\theta)}{g} $$
+
+2. Calculate the range:
+   $$ R = v_0 \cos(\theta) T $$
+   $$ R = \frac{v_0^2 \sin(2\theta)}{g} $$
+
+This equation shows that the range depends on the square of the initial velocity, the sine of twice the angle, and inversely on gravity.
+
+
+## Analysis of the Range
+
+### Dependency on Angle
+The range is maximized when \( \sin(2\theta) \) is maximized, which occurs at \( \theta = 45^\circ \).
+
+### Effect of Other Parameters
+- **Initial Velocity:** The range increases quadratically with \(v_0\). 
+
+- **Gravitational Acceleration:** The range decreases as \(g\) increases.
+
+- **Launch Height:** For \( h > 0 \), the time of flight is longer, increasing the range.
 
  
-              𝑥(𝑡)=𝑣0cos⁡(𝜃)⋅𝑡
 
-   - Vertical motion (y-direction):
+## Practical Applications
 
-              𝑦(𝑡)=𝑣0sin⁡(𝜃)⋅𝑡−12𝑔𝑡2
+### Real-World Scenarios
+- **Uneven Terrain:** The landing point depends on the elevation difference.
 
- - The time of flight (𝑇) is derived by setting 𝑦(𝑡)=0y(t)=0 (when the projectile hits the ground):
+- **Air Resistance:** Introduces drag force, reducing the range and altering the trajectory.
 
-              𝑇=2𝑣0sin⁡(𝜃)𝑔
+- **Sports:** Understanding ball trajectories in soccer, basketball, etc.
 
- - The horizontal range (𝑅R) is given by:
 
-              𝑅=𝑣0cos(𝜃)⋅𝑇
 
-    Substituting 𝑇:
+## Implementation
 
-              𝑅=𝑣02sin(2𝜃)𝑔
- 
-Effect of Initial Conditions
+### Python Simulation
+Below is a Python script to simulate and visualize projectile motion:
 
- - Initial Velocity (𝑣0): Affects the maximum range; higher 𝑣0 increases 𝑅.
-
- - Gravitational Acceleration (g): Affects how fast the projectile falls, reducing 𝑅 as 𝑔 increases.
-
- - Launch Angle (𝜃): The range depends on sin(2𝜃)sin(2θ), peaking at 𝜃=45∘.
-
-2. Analysis of the Range
-
- - The range 𝑅 as a function of 𝜃 follows:
-
-              𝑅(𝜃)=𝑣02𝑔sin(2𝜃)
-
-    - It is a parabolic function of sin(2𝜃), with a maximum at 𝜃=45∘.
-
-Influence of Parameters
-
-  1. Initial Velocity (𝑣0):
-
-    - Doubling 𝑣0 quadruples the range (𝑅∝𝑣02).
-
-  2. Gravitational Acceleration (𝑔):
-
-    - Higher 𝑔 reduces the range (𝑅∝1/𝑔).
-
-  3. Angle of Projection (𝜃):
-
-    - The range peaks at 45∘ and is symmetric about it.
-
-3. Practical Applications
-
- - Uneven Terrain: Adjust 𝑦(𝑡) to account for non-zero launch or landing height:
-
-              𝑦(𝑡)=𝑦0+𝑣0sin(𝜃)⋅𝑡−12𝑔𝑡2
-
-   Solve for 𝑇 using the quadratic formula, and substitute 𝑇 into 𝑥(𝑡)x(t) for the adjusted range.
-
- - Air Resistance: Introduce a drag force proportional to velocity:
-              𝐹drag=−𝑘𝑣
-
-   This leads to coupled differential equations, requiring numerical methods for solutions.
-
-4. Implementation
-
-Steps for Simulation
-
-1. Algorithm:
-
-   - Input parameters: 𝑣0, 𝑔,𝜃,𝑦0.
-
-   - Calculate range 𝑅 for various 𝜃 values (e.g., from 0∘ to 90∘).
-
-2. Visualization:
-   
-   - Plot 𝑅 vs. 𝜃 for different 𝑣0, 𝑔, or 𝑦0.
-
-   - Overlay plots to compare how each parameter influences the range.
-
-Python Code Example
-python
-Copy
-Edit
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Constants
-g = 9.8  # gravitational acceleration (m/s^2)
-
-# Function to calculate range
-def calculate_range(v0, theta, g):
+def projectile_motion(v0, theta, h, g=9.81):
     theta_rad = np.radians(theta)
-    return (v0**2 * np.sin(2 * theta_rad)) / g
+    
+    # Time of flight (quadratic formula for y=0)
+    t_flight = (v0 * np.sin(theta_rad) + np.sqrt((v0 * np.sin(theta_rad))**2 + 2 * g * h)) / g
+    
+    # Time array
+    t = np.linspace(0, t_flight, num=500)
+    
+    # Trajectory equations
+    x = v0 * np.cos(theta_rad) * t
+    y = h + v0 * np.sin(theta_rad) * t - 0.5 * g * t**2
+    
+    return x, y
 
-# Simulation parameters
-v0 = 20  # initial velocity (m/s)
-angles = np.linspace(0, 90, 500)  # angles from 0 to 90 degrees
+def plot_range_vs_angle(v0, h, g=9.81):
+    angles = np.linspace(0, 90, num=500)
+    ranges = []
 
-# Calculate ranges
-ranges = [calculate_range(v0, theta, g) for theta in angles]
+    for theta in angles:
+        theta_rad = np.radians(theta)
+        term = (v0 * np.sin(theta_rad))**2 + 2 * g * h
+        t_flight = (v0 * np.sin(theta_rad) + np.sqrt(term)) / g
+        R = v0 * np.cos(theta_rad) * t_flight
+        ranges.append(R)
 
-# Plot
-plt.figure(figsize=(8, 6))
-plt.plot(angles, ranges, label=f'Initial Velocity = {v0} m/s')
-plt.xlabel('Angle of Projection (degrees)')
-plt.ylabel('Range (meters)')
-plt.title('Projectile Range vs. Angle of Projection')
+    plt.figure(figsize=(10, 6))
+    plt.plot(angles, ranges, label=f"Initial Height: {h} m")
+    plt.xlabel("Angle of Projection (degrees)")
+    plt.ylabel("Range (m)")
+    plt.title("Range vs Angle of Projection")
+    plt.legend()
+    plt.grid()
+    plt.show()
+
+# Example usage
+v0 = 20  # Initial velocity in m/s
+h = 0    # Launch height in meters
+
+g = 9.81  # Gravitational acceleration
+
+# Simulate trajectory
+x, y = projectile_motion(v0, 45, h, g)
+
+# Plot trajectory
+plt.figure(figsize=(10, 6))
+plt.plot(x, y, label="Trajectory (45 degrees)")
+plt.xlabel("Horizontal Distance (m)")
+plt.ylabel("Vertical Distance (m)")
+plt.title("Projectile Motion Trajectory")
 plt.legend()
 plt.grid()
 plt.show()
-This approach provides a comprehensive analysis and practical insights, supported by a computational implementation for visualizing the relationship between the range and the angle of projection.
+
+# Plot range vs angle
+plot_range_vs_angle(v0, h, g)
+```
+
+ 
+
+## Deliverables
+1. A Python script implementing the simulation of projectile motion.
+
+2. Graphs illustrating the trajectory and range as a function of the angle of projection.
+
+3. A discussion of the limitations and potential extensions of the idealized model, such as incorporating air resistance or uneven terrain.
+
+ 
+
+## Discussion
+
+### Limitations
+- **No Air Resistance:** Assumes a vacuum, leading to an overestimation of range.
+
+- **Constant Gravity:** Neglects variations in gravitational acceleration with altitude.
+
+- **Point Mass:** Ignores rotational effects or aerodynamic properties.
+
+### Extensions
+- Incorporate drag forces to model air resistance.
+
+- Simulate projectile motion on non-level surfaces.
+
+- Explore the effect of wind and spin on the projectile.
