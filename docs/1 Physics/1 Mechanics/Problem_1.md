@@ -1,6 +1,7 @@
 # Problem 1
 
 # 1. Theoretical Foundation
+---
 
 ### Projectile Motion Analysis
 
@@ -46,6 +47,7 @@ This equation shows that the range depends on the square of the initial velocity
 ---
 
 # 2. Analysis of the Range
+---
 
 ### Dependency on Angle
 The range is maximized when \( \sin(2\theta) \) is maximized, which occurs at \( \theta = 45^\circ \).
@@ -60,6 +62,7 @@ The range is maximized when \( \sin(2\theta) \) is maximized, which occurs at \(
  ---
 
 # 3. Practical Applications
+---
 
 ### Real-World Scenarios
 - **Uneven Terrain:** The landing point depends on the elevation difference.
@@ -71,6 +74,7 @@ The range is maximized when \( \sin(2\theta) \) is maximized, which occurs at \(
 ---
 
 # 4. Implementation
+---
 
 ### Python Simulation
 Below is a Python script to simulate and visualize projectile motion:
