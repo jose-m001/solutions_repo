@@ -6,6 +6,7 @@ Governing Equations of Motion
 
  - A projectile's motion can be split into two components:
 
+ 
    - Horizontal motion (x-direction):
  
               𝑥(𝑡)=𝑣0cos⁡(𝜃)⋅𝑡
@@ -14,7 +15,7 @@ Governing Equations of Motion
 
               𝑦(𝑡)=𝑣0sin⁡(𝜃)⋅𝑡−12𝑔𝑡2
 
- - The time of flight (𝑇T) is derived by setting 𝑦(𝑡)=0y(t)=0 (when the projectile hits the ground):
+ - The time of flight (𝑇) is derived by setting 𝑦(𝑡)=0y(t)=0 (when the projectile hits the ground):
 
               𝑇=2𝑣0sin⁡(𝜃)𝑔
 
@@ -84,7 +85,7 @@ Steps for Simulation
    - Plot 𝑅 vs. 𝜃 for different 𝑣0, 𝑔, or 𝑦0.
 
    - Overlay plots to compare how each parameter influences the range.
-   
+
 Python Code Example
 python
 Copy
