@@ -6,8 +6,9 @@ Governing Equations of Motion
 
  - A projectile's motion can be split into two components:
 
- 
+
    - Horizontal motion (x-direction):
+
  
               𝑥(𝑡)=𝑣0cos⁡(𝜃)⋅𝑡
 
