@@ -13,9 +13,9 @@ Adding forcing introduces new parameters, such as the amplitude and frequency of
 
 ### Governing Equation
 The motion of a forced damped pendulum is governed by the following nonlinear differential equation:
-\[
+$$
 \frac{d^2\theta}{dt^2} + \beta \frac{d\theta}{dt} + \omega_0^2 \sin(\theta) = A \cos(\omega t),
-\]
+$$
 where:
 - \( \theta \): Angular displacement
 - \( \beta \): Damping coefficient
@@ -25,9 +25,9 @@ where:
 
 ### Small-Angle Approximation
 For small angles (\( \sin(\theta) \approx \theta \)), the equation simplifies to:
-\[
+$$
 \frac{d^2\theta}{dt^2} + \beta \frac{d\theta}{dt} + \omega_0^2 \theta = A \cos(\omega t).
-\]
+$$
 Solutions in this regime can be analyzed to explore resonance conditions and the system's energy response.
 
 ### Resonance Conditions
@@ -63,6 +63,7 @@ Chaotic motion arises as parameters transition through critical thresholds. This
 ---
 
 ## Implementation
+
 
 ### Python Simulation
 Below is a Python script to simulate and visualize the motion of a forced damped pendulum:
