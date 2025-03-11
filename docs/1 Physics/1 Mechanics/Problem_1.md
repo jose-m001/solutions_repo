@@ -156,6 +156,10 @@ plot_range_vs_angle(v0, h, g)
 
  ---
 
+
+ ![Alt text](image.png)
+ ![Alt text](image-1.png)
+
 # 5. Discussion
 
 ---
