@@ -14,9 +14,7 @@ What makes this topic particularly compelling is the number of free parameters i
 1. A Python script implementing the simulation of projectile motion.
 
 2. Detailed description of the family of solutions derived from the governing equations
-
 3. Graphs illustrating the trajectory and range as a function of the angle of projection.
-
 4. A discussion of the limitations and potential extensions of the idealized model, such as incorporating air resistance or uneven terrain.
 
 ---
@@ -69,7 +67,6 @@ The range is maximized when \( \sin(2\theta) \) is maximized, which occurs at \(
 - **Initial Velocity:** The range increases quadratically with \(v_0\). 
 
 - **Gravitational Acceleration:** The range decreases as \(g\) increases.
-
 - **Launch Height:** For \( h > 0 \), the time of flight is longer, increasing the range.
 
  ---
@@ -81,7 +78,6 @@ The range is maximized when \( \sin(2\theta) \) is maximized, which occurs at \(
 - **Uneven Terrain:** The landing point depends on the elevation difference.
 
 - **Air Resistance:** Introduces drag force, reducing the range and altering the trajectory.
-
 - **Sports:** Understanding ball trajectories in soccer, basketball, etc.
 
 ---
@@ -168,12 +164,10 @@ plot_range_vs_angle(v0, h, g)
 - **No Air Resistance:** Assumes a vacuum, leading to an overestimation of range.
 
 - **Constant Gravity:** Neglects variations in gravitational acceleration with altitude.
-
 - **Point Mass:** Ignores rotational effects or aerodynamic properties.
 
 ### Extensions
 - Incorporate drag forces to model air resistance.
 
 - Simulate projectile motion on non-level surfaces.
-
 - Explore the effect of wind and spin on the projectile.
