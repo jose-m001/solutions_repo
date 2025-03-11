@@ -147,6 +147,12 @@ plot_time_series(t, theta)
 plot_phase_portrait(theta, omega_theta)
 ```
 
+![Alt text](image-2.png)
+
+
+
+
+
 ### Additional Visualizations
 1. **Poincaré Sections:** Extract angular displacement and velocity at periodic intervals.
 
