@@ -46,11 +46,14 @@ Where:
 The horizontal range \( R \) is the distance traveled by the projectile when it returns to the same vertical height as the launch point (\( y = 0 \)).
 
 For a projectile launched from ground level (\( h = 0 \)):
+
 1. Solve for the time of flight \( T \):
    $$ T = \frac{2 v_0 \sin(\theta)}{g} $$
 
 2. Calculate the range:
+
    $$ R = v_0 \cos(\theta) T $$
+
    $$ R = \frac{v_0^2 \sin(2\theta)}{g} $$
 
 This equation shows that the range depends on the square of the initial velocity, the sine of twice the angle, and inversely on gravity.
@@ -61,12 +64,15 @@ This equation shows that the range depends on the square of the initial velocity
 ---
 
 ### Dependency on Angle
+
 The range is maximized when \( \sin(2\theta) \) is maximized, which occurs at \( \theta = 45^\circ \).
 
 ### Effect of Other Parameters
+
 - **Initial Velocity:** The range increases quadratically with \(v_0\). 
 
 - **Gravitational Acceleration:** The range decreases as \(g\) increases.
+
 - **Launch Height:** For \( h > 0 \), the time of flight is longer, increasing the range.
 
  ---
@@ -78,6 +84,7 @@ The range is maximized when \( \sin(2\theta) \) is maximized, which occurs at \(
 - **Uneven Terrain:** The landing point depends on the elevation difference.
 
 - **Air Resistance:** Introduces drag force, reducing the range and altering the trajectory.
+
 - **Sports:** Understanding ball trajectories in soccer, basketball, etc.
 
 ---
@@ -161,13 +168,17 @@ plot_range_vs_angle(v0, h, g)
 ---
 
 ### Limitations
+
 - **No Air Resistance:** Assumes a vacuum, leading to an overestimation of range.
 
 - **Constant Gravity:** Neglects variations in gravitational acceleration with altitude.
+
 - **Point Mass:** Ignores rotational effects or aerodynamic properties.
 
 ### Extensions
+
 - Incorporate drag forces to model air resistance.
 
 - Simulate projectile motion on non-level surfaces.
+
 - Explore the effect of wind and spin on the projectile.

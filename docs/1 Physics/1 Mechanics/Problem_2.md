@@ -20,7 +20,9 @@ Adding forcing introduces new parameters, such as the amplitude and frequency of
 1. A Python script implementing the simulation of a forced damped pendulum.
 
 2. Graphs illustrating the behavior for various damping coefficients, driving amplitudes, and frequencies.
+
 3. Phase portraits, Poincaré sections, and bifurcation diagrams.
+
 4. Discussion of the model's limitations and potential extensions.
 
 ---
@@ -28,26 +30,36 @@ Adding forcing introduces new parameters, such as the amplitude and frequency of
 ## Theoretical Foundation
 
 ### Governing Equation
+
 The motion of a forced damped pendulum is governed by the following nonlinear differential equation:
+
 $$
 \frac{d^2\theta}{dt^2} + \beta \frac{d\theta}{dt} + \omega_0^2 \sin(\theta) = A \cos(\omega t),
 $$
+
 where:
 - \( \theta \): Angular displacement
 
 - \( \beta \): Damping coefficient
+
 - \( \omega_0 \): Natural frequency of the pendulum
+
 - \( A \): Amplitude of the external driving force
+
 - \( \omega \): Driving frequency
 
 ### Small-Angle Approximation
+
 For small angles (\( \sin(\theta) \approx \theta \)), the equation simplifies to:
+
 $$
 \frac{d^2\theta}{dt^2} + \beta \frac{d\theta}{dt} + \omega_0^2 \theta = A \cos(\omega t).
 $$
+
 Solutions in this regime can be analyzed to explore resonance conditions and the system's energy response.
 
 ### Resonance Conditions
+
 Resonance occurs when the driving frequency \( \omega \) matches the natural frequency \( \omega_0 \), resulting in maximum energy transfer and amplitude growth (limited by damping).
 
 ---
@@ -55,28 +67,37 @@ Resonance occurs when the driving frequency \( \omega \) matches the natural fre
 # 2. Analysis of Dynamics
 
 ### Parameter Influence
+
 1. **Damping Coefficient (\( \beta \))**:
+
    - High damping suppresses oscillations and prevents resonance.
 
    - Low damping allows larger amplitudes and increases the likelihood of chaotic transitions.
 
 2. **Driving Amplitude (\( A \))**:
+
    - Larger amplitudes introduce stronger nonlinear effects and chaotic behavior.
 
 3. **Driving Frequency (\( \omega \))**:
+
    - Determines resonance and synchronization phenomena.
 
 ### Regular vs Chaotic Motion
-Chaotic motion arises as parameters transition through critical thresholds. This can be visualized using tools like phase portraits and Poincaré sections.
+
+Chaotic motion arises as parameters transition through critical thresholds. 
+
+This can be visualized using tools like phase portraits and Poincaré sections.
 
 ---
 
 # 3. Practical Applications
 
 ### Real-World Scenarios
+
 - **Energy Harvesting Devices:** Optimize oscillations for maximum energy extraction.
 
 - **Suspension Bridges:** Analyze and mitigate resonance-induced failures.
+
 - **Oscillating Circuits:** Model electrical analogs of forced damped systems.
 
 ---
@@ -154,6 +175,7 @@ plot_phase_portrait(theta, omega_theta)
 
 
 ### Additional Visualizations
+
 1. **Poincaré Sections:** Extract angular displacement and velocity at periodic intervals.
 
 2. **Bifurcation Diagrams:** Explore parameter values that induce transitions to chaos.
@@ -164,15 +186,18 @@ plot_phase_portrait(theta, omega_theta)
 # 5. Discussion
 
 ### Limitations
+
 - **Small-Angle Assumption:** Only valid for \( \theta \ll 1 \) radians.
 
 - **Idealized Driving Force:** Assumes a perfectly periodic external force.
+
 - **Linear Damping:** Real-world damping may be nonlinear.
 
 ### Extensions
 - **Nonlinear Damping:** Incorporate velocity-dependent damping terms.
 
 - **Non-Periodic Forcing:** Explore the effects of stochastic or quasiperiodic driving forces.
+
 - **Coupled Pendulums:** Investigate interactions between multiple driven pendulums.
 
 ---
