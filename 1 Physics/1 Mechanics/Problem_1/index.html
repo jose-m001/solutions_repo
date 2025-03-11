@@ -224,14 +224,18 @@
 </ul>
 <h3 id="range-derivation">Range Derivation</h3>
 <p>The horizontal range <span class="arithmatex">\( R \)</span> is the distance traveled by the projectile when it returns to the same vertical height as the launch point (<span class="arithmatex">\( y = 0 \)</span>).</p>
-<p>For a projectile launched from ground level (<span class="arithmatex">\( h = 0 \)</span>):
-1. Solve for the time of flight <span class="arithmatex">\( T \)</span>:
-   $$ T = \frac{2 v_0 \sin(\theta)}{g} $$</p>
+<p>For a projectile launched from ground level (<span class="arithmatex">\( h = 0 \)</span>):</p>
 <ol>
-<li>Calculate the range:
-   $$ R = v_0 \cos(\theta) T $$
-   $$ R = \frac{v_0^2 \sin(2\theta)}{g} $$</li>
+<li>
+<p>Solve for the time of flight <span class="arithmatex">\( T \)</span>:
+   $$ T = \frac{2 v_0 \sin(\theta)}{g} $$</p>
+</li>
+<li>
+<p>Calculate the range:</p>
+</li>
 </ol>
+<p>$$ R = v_0 \cos(\theta) T $$</p>
+<p>$$ R = \frac{v_0^2 \sin(2\theta)}{g} $$</p>
 <p>This equation shows that the range depends on the square of the initial velocity, the sine of twice the angle, and inversely on gravity.</p>
 <hr/>
 <h1 id="2-analysis-of-the-range">2. Analysis of the Range</h1>
@@ -246,7 +250,9 @@
 <li>
 <p><strong>Gravitational Acceleration:</strong> The range decreases as <span class="arithmatex">\(g\)</span> increases.</p>
 </li>
-<li><strong>Launch Height:</strong> For <span class="arithmatex">\( h &gt; 0 \)</span>, the time of flight is longer, increasing the range.</li>
+<li>
+<p><strong>Launch Height:</strong> For <span class="arithmatex">\( h &gt; 0 \)</span>, the time of flight is longer, increasing the range.</p>
+</li>
 </ul>
 <hr/>
 <h1 id="3-practical-applications">3. Practical Applications</h1>
@@ -259,7 +265,9 @@
 <li>
 <p><strong>Air Resistance:</strong> Introduces drag force, reducing the range and altering the trajectory.</p>
 </li>
-<li><strong>Sports:</strong> Understanding ball trajectories in soccer, basketball, etc.</li>
+<li>
+<p><strong>Sports:</strong> Understanding ball trajectories in soccer, basketball, etc.</p>
+</li>
 </ul>
 <hr/>
 <h1 id="4-implementation">4. Implementation</h1>
@@ -339,7 +347,9 @@ plot_range_vs_angle(v0, h, g)
 <li>
 <p><strong>Constant Gravity:</strong> Neglects variations in gravitational acceleration with altitude.</p>
 </li>
-<li><strong>Point Mass:</strong> Ignores rotational effects or aerodynamic properties.</li>
+<li>
+<p><strong>Point Mass:</strong> Ignores rotational effects or aerodynamic properties.</p>
+</li>
 </ul>
 <h3 id="extensions">Extensions</h3>
 <ul>
@@ -349,7 +359,9 @@ plot_range_vs_angle(v0, h, g)
 <li>
 <p>Simulate projectile motion on non-level surfaces.</p>
 </li>
-<li>Explore the effect of wind and spin on the projectile.</li>
+<li>
+<p>Explore the effect of wind and spin on the projectile.</p>
+</li>
 </ul>
 </div>
 </div><footer>
