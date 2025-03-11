@@ -1,11 +1,27 @@
 # Problem 2
 
-# Investigating the Dynamics of a Forced Damped Pendulum
+# 1. Theoretical Foundation
+
+### Investigating the Dynamics of a Forced Damped Pendulum
 
 ## Motivation
+
+---
+
 The forced damped pendulum is a captivating example of a physical system with intricate behavior resulting from the interplay of damping, restoring forces, and external driving forces. By introducing both damping and external periodic forcing, the system demonstrates a transition from simple harmonic motion to a rich spectrum of dynamics, including resonance, chaos, and quasiperiodic behavior. These phenomena serve as a foundation for understanding complex real-world systems, such as driven oscillators, climate systems, and mechanical structures under periodic stress.
 
 Adding forcing introduces new parameters, such as the amplitude and frequency of the external force, which significantly affect the pendulum's behavior. By systematically varying these parameters, a diverse class of solutions can be observed, including synchronized oscillations, chaotic motion, and resonance phenomena. These behaviors not only highlight fundamental physics principles but also provide insights into engineering applications such as energy harvesting, vibration isolation, and mechanical resonance.
+
+
+## Deliverables
+
+---
+
+1. A Python script implementing the simulation of a forced damped pendulum.
+
+2. Graphs illustrating the behavior for various damping coefficients, driving amplitudes, and frequencies.
+3. Phase portraits, Poincaré sections, and bifurcation diagrams.
+4. Discussion of the model's limitations and potential extensions.
 
 ---
 
@@ -18,6 +34,7 @@ $$
 $$
 where:
 - \( \theta \): Angular displacement
+
 - \( \beta \): Damping coefficient
 - \( \omega_0 \): Natural frequency of the pendulum
 - \( A \): Amplitude of the external driving force
@@ -35,11 +52,12 @@ Resonance occurs when the driving frequency \( \omega \) matches the natural fre
 
 ---
 
-## Analysis of Dynamics
+# 2. Analysis of Dynamics
 
 ### Parameter Influence
 1. **Damping Coefficient (\( \beta \))**:
    - High damping suppresses oscillations and prevents resonance.
+
    - Low damping allows larger amplitudes and increases the likelihood of chaotic transitions.
 
 2. **Driving Amplitude (\( A \))**:
@@ -53,16 +71,17 @@ Chaotic motion arises as parameters transition through critical thresholds. This
 
 ---
 
-## Practical Applications
+# 3. Practical Applications
 
 ### Real-World Scenarios
 - **Energy Harvesting Devices:** Optimize oscillations for maximum energy extraction.
+
 - **Suspension Bridges:** Analyze and mitigate resonance-induced failures.
 - **Oscillating Circuits:** Model electrical analogs of forced damped systems.
 
 ---
 
-## Implementation
+# 4. Implementation
 
 
 ### Python Simulation
@@ -130,27 +149,23 @@ plot_phase_portrait(theta, omega_theta)
 
 ### Additional Visualizations
 1. **Poincaré Sections:** Extract angular displacement and velocity at periodic intervals.
+
 2. **Bifurcation Diagrams:** Explore parameter values that induce transitions to chaos.
 
----
-
-## Deliverables
-1. A Python script implementing the simulation of a forced damped pendulum.
-2. Graphs illustrating the behavior for various damping coefficients, driving amplitudes, and frequencies.
-3. Phase portraits, Poincaré sections, and bifurcation diagrams.
-4. Discussion of the model's limitations and potential extensions.
 
 ---
 
-## Discussion
+# 5. Discussion
 
 ### Limitations
 - **Small-Angle Assumption:** Only valid for \( \theta \ll 1 \) radians.
+
 - **Idealized Driving Force:** Assumes a perfectly periodic external force.
 - **Linear Damping:** Real-world damping may be nonlinear.
 
 ### Extensions
 - **Nonlinear Damping:** Incorporate velocity-dependent damping terms.
+
 - **Non-Periodic Forcing:** Explore the effects of stochastic or quasiperiodic driving forces.
 - **Coupled Pendulums:** Investigate interactions between multiple driven pendulums.
 
