@@ -32,7 +32,7 @@ These concepts are critical in designing satellite launches, interplanetary miss
 
 1. **First Cosmic Velocity**: The velocity required for an object to maintain a stable circular orbit around a celestial body.
    
-   $$ v_1 = \sqrt{\frac{G M}{r}} $$
+   $v_1 = \sqrt{\frac{G M}{r}}$
    
    where:
    - $G$: Gravitational constant
@@ -54,11 +54,11 @@ These concepts are critical in designing satellite launches, interplanetary miss
 ## 2. Mathematical Analysis
 
 ### Parameters Influencing Cosmic Velocities
-- **Mass $(\( M \))$**: Higher mass increases the gravitational pull, raising all three velocities.
+- **Mass $\( M \)$**: Higher mass increases the gravitational pull, raising all three velocities.
 
-- **Radius $(\( r \))$**: Greater distances from the center of the celestial body reduce the gravitational force, lowering the velocities.
+- **Radius $\( r \)$**: Greater distances from the center of the celestial body reduce the gravitational force, lowering the velocities.
 
-- **Gravitational Constant $(\( G \))$**: A universal constant influencing the strength of gravity.
+- **Gravitational Constant $\( G \)$**: A universal constant influencing the strength of gravity.
 
 ### Calculations for Earth, Mars, and Jupiter
 
