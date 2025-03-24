@@ -36,7 +36,7 @@ F = \frac{G M m}{r^2},
 $$
 
 where:
-- $ G $is the gravitational constant,
+- \( G \) $is the gravitational constant,
 - \( M \) is Earth's mass,
 - \( m \) is the payload's mass,
 - \( r \) is the distance between the payload and Earth's center.
@@ -49,9 +49,9 @@ $$
 
 Using Newton's Second Law, the equations of motion for the payload in Cartesian coordinates \((x, y)\) are:
 
-\[
+$$
 \ddot{x} = -\frac{G M x}{r^3}, \quad \ddot{y} = -\frac{G M y}{r^3},
-\]
+$$
 
 where \( r = \sqrt{x^2 + y^2} \).
 
