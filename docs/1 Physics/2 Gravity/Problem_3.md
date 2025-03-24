@@ -31,21 +31,21 @@ Understanding these trajectories is essential for space mission operations, such
 
 The motion of a payload near Earth can be described using Newton's Law of Gravitation:
 
-\[
+$$
 F = \frac{G M m}{r^2},
-\]
+$$
 
 where:
-- \( G \) is the gravitational constant,
+- $ G $is the gravitational constant,
 - \( M \) is Earth's mass,
 - \( m \) is the payload's mass,
 - \( r \) is the distance between the payload and Earth's center.
 
 The acceleration due to gravity is given by:
 
-\[
+$$
 a = \frac{F}{m} = \frac{G M}{r^2}.
-\]
+$$
 
 Using Newton's Second Law, the equations of motion for the payload in Cartesian coordinates \((x, y)\) are:
 
