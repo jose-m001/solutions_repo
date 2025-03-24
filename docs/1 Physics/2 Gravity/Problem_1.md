@@ -31,51 +31,51 @@ From calculating the properties of satellite orbits to probing the dynamics of e
 ### Derivation of Kepler's Third Law
 Consider a celestial body of mass \( m \) orbiting a central body of mass \( M \) in a circular orbit of radius \( r \). The centripetal force required for the orbit is provided by gravitational attraction:
 
-\[
+$$
 F = \frac{G M m}{r^2}
-\]
+$$
 
 where:
-- \( G \) is the gravitational constant,
-- \( M \) is the mass of the central body,
-- \( m \) is the mass of the orbiting body,
-- \( r \) is the orbital radius.
+- $\( G \)$ is the gravitational constant,
+- $\( M \)$ is the mass of the central body,
+- $\( m \)$ is the mass of the orbiting body,
+- $\( r \)$ is the orbital radius.
 
 The centripetal force is also expressed as:
 
-\[
+$$
 F = \frac{m v^2}{r}
-\]
+$$
 
 Equating these two expressions:
 
-\[
+$$
 \frac{G M m}{r^2} = \frac{m v^2}{r}
-\]
+$$
 
-Simplify to solve for \( v \):
+Simplify to solve for $\( v \)$:
 
-\[
+$$
 v^2 = \frac{G M}{r}
-\]
+$$
 
-The orbital period \( T \) is related to the orbital velocity \( v \) and radius \( r \) by:
+The orbital period $\( T \)$ is related to the orbital velocity $\( v \)$ and radius $\( r \)$ by:
 
-\[
+$$
 T = \frac{2 \pi r}{v}
-\]
+$$
 
-Substitute \( v = \sqrt{\frac{G M}{r}} \):
+Substitute $\( v = \sqrt{\frac{G M}{r}} \)$:
 
-\[
+$$
 T = \frac{2 \pi r}{\sqrt{\frac{G M}{r}}} = 2 \pi \sqrt{\frac{r^3}{G M}}
-\]
+$$
 
 Squaring both sides yields Kepler's Third Law:
 
-\[
+$$
 T^2 = \frac{4 \pi^2}{G M} r^3
-\]
+$$
 
 ---
 

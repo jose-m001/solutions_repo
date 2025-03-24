@@ -59,13 +59,13 @@ where $( r = \sqrt{x^2 + y^2} )$.
 The type of trajectory depends on the total energy \( E \) of the system:
 - **Elliptical:** $( E < 0 )$
 - **Parabolic:** $\( E = 0 \)$
-- **Hyperbolic:** \( E > 0 \)
+- **Hyperbolic:** $\( E > 0 \)$
 
 The energy is given by:
 
-\[
+$$
 E = \frac{1}{2}mv^2 - \frac{G M m}{r}.
-\]
+$$
 
 ---
 

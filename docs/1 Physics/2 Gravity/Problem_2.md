@@ -54,20 +54,20 @@ These concepts are critical in designing satellite launches, interplanetary miss
 ## 2. Mathematical Analysis
 
 ### Parameters Influencing Cosmic Velocities
-- **Mass (\( M \))**: Higher mass increases the gravitational pull, raising all three velocities.
+- **Mass $(\( M \))$**: Higher mass increases the gravitational pull, raising all three velocities.
 
-- **Radius (\( r \))**: Greater distances from the center of the celestial body reduce the gravitational force, lowering the velocities.
+- **Radius $(\( r \))$**: Greater distances from the center of the celestial body reduce the gravitational force, lowering the velocities.
 
-- **Gravitational Constant (\( G \))**: A universal constant influencing the strength of gravity.
+- **Gravitational Constant $(\( G \))$**: A universal constant influencing the strength of gravity.
 
 ### Calculations for Earth, Mars, and Jupiter
 
 #### Example Values:
-- Earth: \( M = 5.972 \times 10^{24} \ \text{kg}, r = 6.371 \times 10^{6} \ \text{m} \)
+- Earth: $\( M = 5.972 \times 10^{24} \ \text{kg}, r = 6.371 \times 10^{6} \ \text{m} \)$
 
-- Mars: \( M = 6.39 \times 10^{23} \ \text{kg}, r = 3.39 \times 10^{6} \ \text{m} \)
+- Mars: $\( M = 6.39 \times 10^{23} \ \text{kg}, r = 3.39 \times 10^{6} \ \text{m} \)$
 
-- Jupiter: \( M = 1.898 \times 10^{27} \ \text{kg}, r = 6.99 \times 10^{7} \ \text{m} \)
+- Jupiter: $\( M = 1.898 \times 10^{27} \ \text{kg}, r = 6.99 \times 10^{7} \ \text{m} \)$
 
 ---
 
