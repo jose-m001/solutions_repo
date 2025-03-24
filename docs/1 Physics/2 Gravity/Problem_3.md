@@ -39,7 +39,7 @@ where:
 - $( G )$ is the gravitational constant,
 - $( M )$ is Earth's mass,
 - $( m )$ is the payload's mass,
-- \( r \) is the distance between the payload and Earth's center.
+- $( r )$ is the distance between the payload and Earth's center.
 
 The acceleration due to gravity is given by:
 
@@ -53,12 +53,12 @@ $$
 \ddot{x} = -\frac{G M x}{r^3}, \quad \ddot{y} = -\frac{G M y}{r^3},
 $$
 
-where \( r = \sqrt{x^2 + y^2} \).
+where $( r = \sqrt{x^2 + y^2} )$.
 
 ### Trajectory Classification
 The type of trajectory depends on the total energy \( E \) of the system:
-- **Elliptical:** \( E < 0 \)
-- **Parabolic:** \( E = 0 \)
+- **Elliptical:** $( E < 0 )$
+- **Parabolic:** $\( E = 0 \)$
 - **Hyperbolic:** \( E > 0 \)
 
 The energy is given by:
