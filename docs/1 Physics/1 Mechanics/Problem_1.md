@@ -5,54 +5,69 @@
 
 ### Projectile Motion Analysis
 
-## Motivation
-Projectile motion, while seemingly simple, offers a rich playground for exploring fundamental principles of physics. The problem is straightforward: analyze how the range of a projectile depends on its angle of projection. Yet, beneath this simplicity lies a complex and versatile framework. The equations governing projectile motion involve both linear and quadratic relationships, making them accessible yet deeply insightful.
+---
 
-What makes this topic particularly compelling is the number of free parameters involved in these equations, such as initial velocity, gravitational acceleration, and launch height. These parameters give rise to a diverse set of solutions that can describe a wide array of real-world phenomena, from the arc of a soccer ball to the trajectory of a rocket.
+## 1.1 Motivation
 
-## Deliverables
-1. A Python script implementing the simulation of projectile motion.
+Projectile motion, while seemingly simple, offers a rich playground for exploring fundamental principles of physics. The problem is straightforward: analyze how the range of a projectile depends on its angle of projection. 
 
-2. Detailed description of the family of solutions derived from the governing equations
-3. Graphs illustrating the trajectory and range as a function of the angle of projection.
-4. A discussion of the limitations and potential extensions of the idealized model, such as incorporating air resistance or uneven terrain.
+Yet, beneath this simplicity lies a complex and versatile framework. The equations governing projectile motion involve both linear and quadratic relationships, making them accessible yet deeply insightful.
+
+What makes this topic particularly compelling is the number of free parameters involved in these equations, such as initial velocity, gravitational acceleration, and launch height. 
+
+These parameters give rise to a diverse set of solutions that can describe a wide array of real-world phenomena, from the arc of a soccer ball to the trajectory of a rocket.
 
 ---
 
-## Theoretical Foundation
+## 1.2 Deliverables
+
+1 . A Python script implementing the simulation of projectile motion.
+
+2 . Detailed description of the family of solutions derived from the governing equations
+
+3 . Graphs illustrating the trajectory and range as a function of the angle of projection.
+
+4 . A discussion of the limitations and potential extensions of the idealized model, such as incorporating air resistance or uneven terrain.
+
+---
+
+## 1.3 Theoretical Foundation
+
+---
 
 ### Governing Equations
 The motion of a projectile can be described using the following kinematic equations:
 
-1. **Horizontal Motion:**
+1 . **Horizontal Motion:**
    $$ x(t) = v_0 \cos(\theta) t $$
 
-2. **Vertical Motion:**
+2 . **Vertical Motion:**
    $$ y(t) = h + v_0 \sin(\theta) t - \frac{1}{2} g t^2 $$
 
 Where:
 
-- \( x(t) \) and \( y(t) \) are the horizontal and vertical positions at time \( t \), respectively.
+- $x(t)$ and $y(t)$ are the horizontal and vertical positions at time $t$, respectively.
 
-- \( v_0 \) is the initial velocity.
+- $v_0$ is the initial velocity.
 
-- \( \theta \) is the angle of projection.
+- $\theta$ is the angle of projection.
 
-- \( h \) is the initial height.
+- $h$ is the initial height.
 
-- \( g \) is the acceleration due to gravity.
+- $g$ is the acceleration due to gravity.
 
 ### Range Derivation
-The horizontal range \( R \) is the distance traveled by the projectile when it returns to the same vertical height as the launch point (\( y = 0 \)).
+The horizontal range $R$ is the distance traveled by the projectile when it returns to the same vertical height as the launch point ($y = 0$).
 
-For a projectile launched from ground level (\( h = 0 \)):
+For a projectile launched from ground level ($h = 0$):
 
-1. Solve for the time of flight \( T \):
+1 . Solve for the time of flight $T$:
    $$ T = \frac{2 v_0 \sin(\theta)}{g} $$
 
-2. Calculate the range:
+2 . Calculate the range:
 
    $$ R = v_0 \cos(\theta) T $$
+
 
    $$ R = \frac{v_0^2 \sin(2\theta)}{g} $$
 
@@ -65,15 +80,15 @@ This equation shows that the range depends on the square of the initial velocity
 
 ### Dependency on Angle
 
-The range is maximized when \( \sin(2\theta) \) is maximized, which occurs at \( \theta = 45^\circ \).
+The range is maximized when $\sin(2\theta)$ is maximized, which occurs at $\theta = 45^\circ$.
 
 ### Effect of Other Parameters
 
-- **Initial Velocity:** The range increases quadratically with \(v_0\). 
+- **Initial Velocity:** The range increases quadratically with $v_0$. 
 
-- **Gravitational Acceleration:** The range decreases as \(g\) increases.
+- **Gravitational Acceleration:** The range decreases as $g$ increases.
 
-- **Launch Height:** For \( h > 0 \), the time of flight is longer, increasing the range.
+- **Launch Height:** For $h > 0$, the time of flight is longer, increasing the range.
 
  ---
 
@@ -163,6 +178,7 @@ plot_range_vs_angle(v0, h, g)
  ![Alt text](image.png)
  ![Alt text](image-1.png)
 
+---
 # 5. Discussion
 
 ---

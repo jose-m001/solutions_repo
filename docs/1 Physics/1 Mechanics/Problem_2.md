@@ -1,33 +1,43 @@
 # Problem 2
-
+---
 # 1. Theoretical Foundation
+---
 
 ### Investigating the Dynamics of a Forced Damped Pendulum
+---
 
-## Motivation
+## 1.1 Motivation
+
+
+The forced damped pendulum is a captivating example of a physical system with intricate behavior resulting from the interplay of damping, restoring forces, and external driving forces. 
+
+By introducing both damping and external periodic forcing, the system demonstrates a transition from simple harmonic motion to a rich spectrum of dynamics, including resonance, chaos, and quasiperiodic behavior. 
+
+These phenomena serve as a foundation for understanding complex real-world systems, such as driven oscillators, climate systems, and mechanical structures under periodic stress.
+
+Adding forcing introduces new parameters, such as the amplitude and frequency of the external force, which significantly affect the pendulum's behavior. 
+
+By systematically varying these parameters, a diverse class of solutions can be observed, including synchronized oscillations, chaotic motion, and resonance phenomena. 
+
+These behaviors not only highlight fundamental physics principles but also provide insights into engineering applications such as energy harvesting, vibration isolation, and mechanical resonance.
 
 ---
 
-The forced damped pendulum is a captivating example of a physical system with intricate behavior resulting from the interplay of damping, restoring forces, and external driving forces. By introducing both damping and external periodic forcing, the system demonstrates a transition from simple harmonic motion to a rich spectrum of dynamics, including resonance, chaos, and quasiperiodic behavior. These phenomena serve as a foundation for understanding complex real-world systems, such as driven oscillators, climate systems, and mechanical structures under periodic stress.
-
-Adding forcing introduces new parameters, such as the amplitude and frequency of the external force, which significantly affect the pendulum's behavior. By systematically varying these parameters, a diverse class of solutions can be observed, including synchronized oscillations, chaotic motion, and resonance phenomena. These behaviors not only highlight fundamental physics principles but also provide insights into engineering applications such as energy harvesting, vibration isolation, and mechanical resonance.
+## 1.2 Deliverables
 
 
-## Deliverables
+1 . A Python script implementing the simulation of a forced damped pendulum.
 
----
+2 . Graphs illustrating the behavior for various damping coefficients, driving amplitudes, and frequencies.
 
-1. A Python script implementing the simulation of a forced damped pendulum.
+3 . Phase portraits, Poincaré sections, and bifurcation diagrams.
 
-2. Graphs illustrating the behavior for various damping coefficients, driving amplitudes, and frequencies.
-
-3. Phase portraits, Poincaré sections, and bifurcation diagrams.
-
-4. Discussion of the model's limitations and potential extensions.
+4 . Discussion of the model's limitations and potential extensions.
 
 ---
 
-## Theoretical Foundation
+## 1.3 Theoretical Foundation
+---
 
 ### Governing Equation
 
@@ -38,19 +48,20 @@ $$
 $$
 
 where:
-- \( \theta \): Angular displacement
 
-- \( \beta \): Damping coefficient
+- $\theta$: Angular displacement
 
-- \( \omega_0 \): Natural frequency of the pendulum
+- $\beta$: Damping coefficient
 
-- \( A \): Amplitude of the external driving force
+- $\omega_0$: Natural frequency of the pendulum
 
-- \( \omega \): Driving frequency
+- $A$: Amplitude of the external driving force
+
+- $\omega$: Driving frequency
 
 ### Small-Angle Approximation
 
-For small angles (\( \sin(\theta) \approx \theta \)), the equation simplifies to:
+For small angles ($\sin(\theta) \approx \theta$), the equation simplifies to:
 
 $$
 \frac{d^2\theta}{dt^2} + \beta \frac{d\theta}{dt} + \omega_0^2 \theta = A \cos(\omega t).
@@ -60,37 +71,40 @@ Solutions in this regime can be analyzed to explore resonance conditions and the
 
 ### Resonance Conditions
 
-Resonance occurs when the driving frequency \( \omega \) matches the natural frequency \( \omega_0 \), resulting in maximum energy transfer and amplitude growth (limited by damping).
+Resonance occurs when the driving frequency $\omega$ matches the natural frequency $\omega_0$, resulting in maximum energy transfer and amplitude growth (limited by damping).
 
 ---
 
 # 2. Analysis of Dynamics
 
+---
+
 ### Parameter Influence
 
-1. **Damping Coefficient (\( \beta \))**:
+1 . **Damping Coefficient ($\beta$)**:
 
-   - High damping suppresses oscillations and prevents resonance.
+ - High damping suppresses oscillations and prevents resonance.
 
-   - Low damping allows larger amplitudes and increases the likelihood of chaotic transitions.
+ - Low damping allows larger amplitudes and increases the likelihood of chaotic transitions.
 
-2. **Driving Amplitude (\( A \))**:
+2 . **Driving Amplitude ($A$)**:
 
-   - Larger amplitudes introduce stronger nonlinear effects and chaotic behavior.
+ - Larger amplitudes introduce stronger nonlinear effects and chaotic behavior.
 
-3. **Driving Frequency (\( \omega \))**:
+3 . **Driving Frequency ($\omega$)**:
 
-   - Determines resonance and synchronization phenomena.
+ - Determines resonance and synchronization phenomena.
 
 ### Regular vs Chaotic Motion
 
-Chaotic motion arises as parameters transition through critical thresholds. 
-
-This can be visualized using tools like phase portraits and Poincaré sections.
+1 . Chaotic motion arises as parameters transition through critical thresholds. 
+     
+2 . This can be visualized using tools like phase portraits and Poincaré sections.
 
 ---
 
 # 3. Practical Applications
+---
 
 ### Real-World Scenarios
 
@@ -104,6 +118,7 @@ This can be visualized using tools like phase portraits and Poincaré sections.
 
 # 4. Implementation
 
+---
 
 ### Python Simulation
 Below is a Python script to simulate and visualize the motion of a forced damped pendulum:
@@ -171,29 +186,22 @@ plot_phase_portrait(theta, omega_theta)
 ![Alt text](image-2.png)
 
 
-
-
-
-### Additional Visualizations
-
-1. **Poincaré Sections:** Extract angular displacement and velocity at periodic intervals.
-
-2. **Bifurcation Diagrams:** Explore parameter values that induce transitions to chaos.
-
-
 ---
 
 # 5. Discussion
 
+---
+
 ### Limitations
 
-- **Small-Angle Assumption:** Only valid for \( \theta \ll 1 \) radians.
+- **Small-Angle Assumption:** Only valid for $\theta \ll 1$ radians.
 
 - **Idealized Driving Force:** Assumes a perfectly periodic external force.
 
 - **Linear Damping:** Real-world damping may be nonlinear.
 
 ### Extensions
+
 - **Nonlinear Damping:** Incorporate velocity-dependent damping terms.
 
 - **Non-Periodic Forcing:** Explore the effects of stochastic or quasiperiodic driving forces.
