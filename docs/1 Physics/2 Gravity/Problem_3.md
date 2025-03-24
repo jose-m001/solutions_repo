@@ -37,8 +37,8 @@ $$
 
 where:
 - $(G)$ is the gravitational constant,
-- \( M \) is Earth's mass,
-- \( m \) is the payload's mass,
+- $(M)$ is Earth's mass,
+- $(m)$ is the payload's mass,
 - \( r \) is the distance between the payload and Earth's center.
 
 The acceleration due to gravity is given by:
