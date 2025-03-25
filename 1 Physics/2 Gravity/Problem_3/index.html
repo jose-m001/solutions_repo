@@ -182,39 +182,33 @@
 <p>1 . <strong>Markdown Document:</strong> Detailed explanation of trajectory analysis.</p>
 <p>2 . <strong>Python Script:</strong> Numerical simulation of payload motion.</p>
 <p>3 . <strong>Graphical Representations:</strong></p>
-<ul>
-<li>
-<p>Orbital trajectories for different initial velocities and positions.</p>
-</li>
-<li>
-<p>Comparison of parabolic, hyperbolic, and elliptical trajectories.</p>
-</li>
-</ul>
+<p>-  Orbital trajectories for different initial velocities and positions.</p>
+<p>-  Comparison of parabolic, hyperbolic, and elliptical trajectories.</p>
 <h2 id="theoretical-foundation">Theoretical Foundation</h2>
 <h3 id="governing-equations">Governing Equations</h3>
 <p>The motion of a payload near Earth can be described using Newton's Law of Gravitation:</p>
 <div class="arithmatex">\[
 F = \frac{G M m}{r^2},
 \]</div>
-<p>where:
-- <span class="arithmatex">\(( G )\)</span> is the gravitational constant,
-- <span class="arithmatex">\(( M )\)</span> is Earth's mass,
-- <span class="arithmatex">\(( m )\)</span> is the payload's mass,
-- <span class="arithmatex">\(( r )\)</span> is the distance between the payload and Earth's center.</p>
+<p>Where:</p>
+<p><span class="arithmatex">\((G)\)</span> is the gravitational constant</p>
+<p><span class="arithmatex">\((M)\)</span> is Earth's mass</p>
+<p><span class="arithmatex">\((m)\)</span> is the payload's mass</p>
+<p><span class="arithmatex">\((r)\)</span> is the distance between the payload and Earth's center</p>
 <p>The acceleration due to gravity is given by:</p>
 <div class="arithmatex">\[
 a = \frac{F}{m} = \frac{G M}{r^2}.
 \]</div>
 <p>Using Newton's Second Law, the equations of motion for the payload in Cartesian coordinates <span class="arithmatex">\((x, y)\)</span> are:</p>
 <div class="arithmatex">\[
-\ddot{x} = -\frac{G M x}{r^3}, \quad \ddot{y} = -\frac{G M y}{r^3},
+\ddot{x} = -\frac{G M x}{r^3}, \quad \ddot{y} = - \frac{G M y}{r^3}
 \]</div>
-<p>where <span class="arithmatex">\(( r = \sqrt{x^2 + y^2} )\)</span>.</p>
+<p>Where <span class="arithmatex">\(( r = \sqrt{x^2 + y^2} )\)</span>.</p>
 <h3 id="trajectory-classification">Trajectory Classification</h3>
-<p>The type of trajectory depends on the total energy <span class="arithmatex">\( E \)</span> of the system:
-- <strong>Elliptical:</strong> <span class="arithmatex">\(( E &lt; 0 )\)</span>
-- <strong>Parabolic:</strong> <span class="arithmatex">\(\( E = 0 \)\)</span>
-- <strong>Hyperbolic:</strong> <span class="arithmatex">\(\( E &gt; 0 \)\)</span></p>
+<p>The type of trajectory depends on the total energy <span class="arithmatex">\(( E )\)</span> of the system:</p>
+<p>- <strong>Elliptical:</strong> <span class="arithmatex">\(( E &lt; 0 )\)</span></p>
+<p>- <strong>Parabolic:</strong> <span class="arithmatex">\(( E = 0 )\)</span></p>
+<p>- <strong>Hyperbolic:</strong> <span class="arithmatex">\(( E &gt; 0 )\)</span></p>
 <p>The energy is given by:</p>
 <div class="arithmatex">\[
 E = \frac{1}{2}mv^2 - \frac{G M m}{r}.
@@ -283,19 +277,16 @@ plt.grid()
 plt.axis('equal')
 plt.show()
 </code></pre>
+<p><img alt="Alt text" src="../image-4.png"/></p>
 <hr/>
 <h2 id="discussion">Discussion</h2>
 <h3 id="applications">Applications</h3>
-<ul>
-<li><strong>Orbital Insertion:</strong> Achieving stable orbits for satellites.</li>
-<li><strong>Reentry Analysis:</strong> Predicting paths for safe reentry of payloads.</li>
-<li><strong>Escape Scenarios:</strong> Determining conditions for interplanetary missions.</li>
-</ul>
+<p>- <strong>Orbital Insertion:</strong> Achieving stable orbits for satellites.</p>
+<p>- <strong>Reentry Analysis:</strong> Predicting paths for safe reentry of payloads.</p>
+<p>- <strong>Escape Scenarios:</strong> Determining conditions for interplanetary missions.</p>
 <h3 id="limitations">Limitations</h3>
-<ul>
-<li><strong>Simplifications:</strong> Assumes a point-mass Earth and neglects atmospheric drag.</li>
-<li><strong>Perturbations:</strong> Ignores gravitational effects from other celestial bodies.</li>
-</ul>
+<p>- <strong>Simplifications:</strong> Assumes a point-mass Earth and neglects atmospheric drag.</p>
+<p>- <strong>Perturbations:</strong> Ignores gravitational effects from other celestial bodies.</p>
 <p>By analyzing the dynamics of a payload released near Earth, we can gain deeper insights into orbital mechanics and enhance the design of space missions.</p>
 </div>
 </div><footer>
