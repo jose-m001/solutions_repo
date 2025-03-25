@@ -19,10 +19,9 @@ Understanding these trajectories is essential for space mission operations, such
 
 3 . **Graphical Representations:**
     
--  Orbital trajectories for different initial velocities and positions.
-    
-    
--  Comparison of parabolic, hyperbolic, and elliptical trajectories.
+  \-  Orbital trajectories for different initial velocities and positions.
+      
+  \-  Comparison of parabolic, hyperbolic, and elliptical trajectories.
 
 
 ## Theoretical Foundation
@@ -35,11 +34,15 @@ $$
 F = \frac{G M m}{r^2},
 $$
 
-where:
-- $( G )$ is the gravitational constant,
-- $( M )$ is Earth's mass,
-- $( m )$ is the payload's mass,
-- $( r )$ is the distance between the payload and Earth's center.
+Where:
+
+ $(G)$ is the gravitational constant
+
+ $(M)$ is Earth's mass
+ 
+ $(m)$ is the payload's mass
+ 
+ $(r)$ is the distance between the payload and Earth's center
 
 The acceleration due to gravity is given by:
 
@@ -47,19 +50,23 @@ $$
 a = \frac{F}{m} = \frac{G M}{r^2}.
 $$
 
-Using Newton's Second Law, the equations of motion for the payload in Cartesian coordinates \((x, y)\) are:
+Using Newton's Second Law, the equations of motion for the payload in Cartesian coordinates $(x, y)$ are:
 
 $$
-\ddot{x} = -\frac{G M x}{r^3}, \quad \ddot{y} = -\frac{G M y}{r^3},
+\ddot{x} = -\frac{G M x}{r^3}, \quad \ddot{y} = - \frac{G M y}{r^3}
 $$
 
-where $( r = \sqrt{x^2 + y^2} )$.
+Where $( r = \sqrt{x^2 + y^2} )$.
 
 ### Trajectory Classification
-The type of trajectory depends on the total energy \( E \) of the system:
-- **Elliptical:** $( E < 0 )$
-- **Parabolic:** $\( E = 0 \)$
-- **Hyperbolic:** $\( E > 0 \)$
+
+The type of trajectory depends on the total energy $( E )$ of the system:
+
+ \- **Elliptical:** $( E < 0 )$
+
+ \- **Parabolic:** $( E = 0 )$
+
+ \- **Hyperbolic:** $( E > 0 )$
 
 The energy is given by:
 
@@ -136,18 +143,25 @@ plt.axis('equal')
 plt.show()
 ```
 
+![Alt text](image-4.png)
+
 ---
 
 ## Discussion
 
 ### Applications
-- **Orbital Insertion:** Achieving stable orbits for satellites.
-- **Reentry Analysis:** Predicting paths for safe reentry of payloads.
-- **Escape Scenarios:** Determining conditions for interplanetary missions.
+
+\- **Orbital Insertion:** Achieving stable orbits for satellites.
+
+\- **Reentry Analysis:** Predicting paths for safe reentry of payloads.
+
+\- **Escape Scenarios:** Determining conditions for interplanetary missions.
 
 ### Limitations
-- **Simplifications:** Assumes a point-mass Earth and neglects atmospheric drag.
-- **Perturbations:** Ignores gravitational effects from other celestial bodies.
+
+\- **Simplifications:** Assumes a point-mass Earth and neglects atmospheric drag.
+
+\- **Perturbations:** Ignores gravitational effects from other celestial bodies.
 
 By analyzing the dynamics of a payload released near Earth, we can gain deeper insights into orbital mechanics and enhance the design of space missions.
 

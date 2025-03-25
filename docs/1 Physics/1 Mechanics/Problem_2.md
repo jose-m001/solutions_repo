@@ -49,15 +49,15 @@ $$
 
 where:
 
-- $\theta$: Angular displacement
+\- $\theta$: Angular displacement
 
-- $\beta$: Damping coefficient
+\- $\beta$: Damping coefficient
 
-- $\omega_0$: Natural frequency of the pendulum
+\- $\omega_0$: Natural frequency of the pendulum
 
-- $A$: Amplitude of the external driving force
+\- $A$: Amplitude of the external driving force
 
-- $\omega$: Driving frequency
+\- $\omega$: Driving frequency
 
 ### Small-Angle Approximation
 
@@ -83,17 +83,17 @@ Resonance occurs when the driving frequency $\omega$ matches the natural frequen
 
 1 . **Damping Coefficient ($\beta$)**:
 
- - High damping suppresses oscillations and prevents resonance.
+ \- High damping suppresses oscillations and prevents resonance.
 
- - Low damping allows larger amplitudes and increases the likelihood of chaotic transitions.
+ \- Low damping allows larger amplitudes and increases the likelihood of chaotic transitions.
 
 2 . **Driving Amplitude ($A$)**:
 
- - Larger amplitudes introduce stronger nonlinear effects and chaotic behavior.
+ \- Larger amplitudes introduce stronger nonlinear effects and chaotic behavior.
 
 3 . **Driving Frequency ($\omega$)**:
 
- - Determines resonance and synchronization phenomena.
+ \- Determines resonance and synchronization phenomena.
 
 ### Regular vs Chaotic Motion
 
@@ -108,11 +108,11 @@ Resonance occurs when the driving frequency $\omega$ matches the natural frequen
 
 ### Real-World Scenarios
 
-- **Energy Harvesting Devices:** Optimize oscillations for maximum energy extraction.
+\- **Energy Harvesting Devices:** Optimize oscillations for maximum energy extraction.
 
-- **Suspension Bridges:** Analyze and mitigate resonance-induced failures.
+\- **Suspension Bridges:** Analyze and mitigate resonance-induced failures.
 
-- **Oscillating Circuits:** Model electrical analogs of forced damped systems.
+\- **Oscillating Circuits:** Model electrical analogs of forced damped systems.
 
 ---
 
@@ -194,19 +194,19 @@ plot_phase_portrait(theta, omega_theta)
 
 ### Limitations
 
-- **Small-Angle Assumption:** Only valid for $\theta \ll 1$ radians.
+\- **Small-Angle Assumption:** Only valid for $\theta \ll 1$ radians.
 
-- **Idealized Driving Force:** Assumes a perfectly periodic external force.
+\- **Idealized Driving Force:** Assumes a perfectly periodic external force.
 
-- **Linear Damping:** Real-world damping may be nonlinear.
+\- **Linear Damping:** Real-world damping may be nonlinear.
 
 ### Extensions
 
-- **Nonlinear Damping:** Incorporate velocity-dependent damping terms.
+\- **Nonlinear Damping:** Incorporate velocity-dependent damping terms.
 
-- **Non-Periodic Forcing:** Explore the effects of stochastic or quasiperiodic driving forces.
+\- **Non-Periodic Forcing:** Explore the effects of stochastic or quasiperiodic driving forces.
 
-- **Coupled Pendulums:** Investigate interactions between multiple driven pendulums.
+\- **Coupled Pendulums:** Investigate interactions between multiple driven pendulums.
 
 ---
 

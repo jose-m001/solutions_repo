@@ -46,15 +46,15 @@ The motion of a projectile can be described using the following kinematic equati
 
 Where:
 
-- $x(t)$ and $y(t)$ are the horizontal and vertical positions at time $t$, respectively.
+\- $x(t)$ and $y(t)$ are the horizontal and vertical positions at time $t$, respectively.
 
-- $v_0$ is the initial velocity.
+\- $(v_0)$ is the initial velocity.
 
-- $\theta$ is the angle of projection.
+\- $(\theta)$ is the angle of projection.
 
-- $h$ is the initial height.
+\- $(h)$ is the initial height.
 
-- $g$ is the acceleration due to gravity.
+\- $(g)$ is the acceleration due to gravity.
 
 ### Range Derivation
 The horizontal range $R$ is the distance traveled by the projectile when it returns to the same vertical height as the launch point ($y = 0$).
@@ -84,11 +84,11 @@ The range is maximized when $\sin(2\theta)$ is maximized, which occurs at $\thet
 
 ### Effect of Other Parameters
 
-- **Initial Velocity:** The range increases quadratically with $v_0$. 
+\- **Initial Velocity:** The range increases quadratically with $v_0$. 
 
-- **Gravitational Acceleration:** The range decreases as $g$ increases.
+\- **Gravitational Acceleration:** The range decreases as $g$ increases.
 
-- **Launch Height:** For $h > 0$, the time of flight is longer, increasing the range.
+\- **Launch Height:** For $h > 0$, the time of flight is longer, increasing the range.
 
  ---
 
@@ -96,11 +96,11 @@ The range is maximized when $\sin(2\theta)$ is maximized, which occurs at $\thet
 ---
 
 ### Real-World Scenarios
-- **Uneven Terrain:** The landing point depends on the elevation difference.
+\- **Uneven Terrain:** The landing point depends on the elevation difference.
 
-- **Air Resistance:** Introduces drag force, reducing the range and altering the trajectory.
+\- **Air Resistance:** Introduces drag force, reducing the range and altering the trajectory.
 
-- **Sports:** Understanding ball trajectories in soccer, basketball, etc.
+\- **Sports:** Understanding ball trajectories in soccer, basketball, etc.
 
 ---
 
@@ -185,16 +185,16 @@ plot_range_vs_angle(v0, h, g)
 
 ### Limitations
 
-- **No Air Resistance:** Assumes a vacuum, leading to an overestimation of range.
+\- **No Air Resistance:** Assumes a vacuum, leading to an overestimation of range.
 
-- **Constant Gravity:** Neglects variations in gravitational acceleration with altitude.
+\- **Constant Gravity:** Neglects variations in gravitational acceleration with altitude.
 
-- **Point Mass:** Ignores rotational effects or aerodynamic properties.
+\- **Point Mass:** Ignores rotational effects or aerodynamic properties.
 
 ### Extensions
 
-- Incorporate drag forces to model air resistance.
+\- Incorporate drag forces to model air resistance.
 
-- Simulate projectile motion on non-level surfaces.
+\- Simulate projectile motion on non-level surfaces.
 
-- Explore the effect of wind and spin on the projectile.
+\- Explore the effect of wind and spin on the projectile.

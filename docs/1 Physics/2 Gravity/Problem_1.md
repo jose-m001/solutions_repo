@@ -12,15 +12,15 @@ From calculating the properties of satellite orbits to probing the dynamics of e
 ---
 
 ## 1.2 Deliverables
-1 . **Markdown Document:** Explanation of Kepler's Third Law and its derivation.
+\(1.\) **Markdown Document:** Explanation of Kepler's Third Law and its derivation.
 
-2 . **Python Script:** Computational model for circular orbits.
+\(2.\) **Python Script:** Computational model for circular orbits.
 
-3 . **Graphical Representations:**
+\(3.\) **Graphical Representations:**
 
- - Log-log plot of orbital period vs radius.
+   \- Log plot of orbital period vs radius.
  
- - Verification plot of Kepler's constant.
+   \- Verification plot of Kepler's constant.
 
 ---
 
@@ -29,17 +29,23 @@ From calculating the properties of satellite orbits to probing the dynamics of e
 ---
 
 ### Derivation of Kepler's Third Law
-Consider a celestial body of mass \( m \) orbiting a central body of mass \( M \) in a circular orbit of radius \( r \). The centripetal force required for the orbit is provided by gravitational attraction:
+Consider a celestial body of mass \( m \) orbiting a central body of mass \( M \) in a circular orbit of radius \( r \). 
+
+The centripetal force required for the orbit is provided by gravitational attraction:
 
 $$
 F = \frac{G M m}{r^2}
 $$
 
-where:
-- $\( G \)$ is the gravitational constant,
-- $\( M \)$ is the mass of the central body,
-- $\( m \)$ is the mass of the orbiting body,
-- $\( r \)$ is the orbital radius.
+Where:
+
+\- $(G)$ is the gravitational constant
+
+\- $(M)$ is the mass of the central body
+
+\- $(m)$ is the mass of the orbiting body
+
+\- $(r)$ is the orbital radius
 
 The centripetal force is also expressed as:
 
@@ -53,19 +59,19 @@ $$
 \frac{G M m}{r^2} = \frac{m v^2}{r}
 $$
 
-Simplify to solve for $\( v \)$:
+Simplify to solve for $( v )$:
 
 $$
 v^2 = \frac{G M}{r}
 $$
 
-The orbital period $\( T \)$ is related to the orbital velocity $\( v \)$ and radius $\( r \)$ by:
+The orbital period $( T )$ is related to the orbital velocity $( v )$ and radius $( r )$ by:
 
 $$
 T = \frac{2 \pi r}{v}
 $$
 
-Substitute $\( v = \sqrt{\frac{G M}{r}} \)$:
+Substitute $( v = \sqrt{\frac{G M}{r}} )$:
 
 $$
 T = \frac{2 \pi r}{\sqrt{\frac{G M}{r}}} = 2 \pi \sqrt{\frac{r^3}{G M}}
@@ -90,9 +96,9 @@ $$
 
 ### Examples
 
-- **The Moon's Orbit:** Using the Moon's orbital period and radius, one can calculate Earth's mass.
+\- **The Moon's Orbit:** Using the Moon's orbital period and radius, one can calculate Earth's mass.
 
-- **Planetary Orbits:** Applying Kepler's Third Law to the Solar System planets provides accurate orbital properties.
+\- **Planetary Orbits:** Applying Kepler's Third Law to the Solar System planets provides accurate orbital properties.
 
 ---
 
@@ -152,12 +158,14 @@ plt.show()
 ---
 
 ### Extensions
-- **Elliptical Orbits:** Kepler's Third Law can be generalized for elliptical orbits by replacing \( r \) with the semi-major axis.
-- **Non-Point Masses:** Considerations for binary systems or extended mass distributions.
+\- **Elliptical Orbits:** Kepler's Third Law can be generalized for elliptical orbits by replacing \( r \) with the semi-major axis.
+
+\- **Non-Point Masses:** Considerations for binary systems or extended mass distributions.
 
 ### Limitations
-- **Simplifications:** Assumes circular orbits and point masses.
-- **Perturbations:** Neglects gravitational influences from other bodies or relativistic effects.
+\- **Simplifications:** Assumes circular orbits and point masses.
+
+\- **Perturbations:** Neglects gravitational influences from other bodies or relativistic effects.
 
 By combining theoretical insights with computational tools, the profound simplicity and utility of Kepler's Third Law can be effectively explored and applied to celestial mechanics.
 

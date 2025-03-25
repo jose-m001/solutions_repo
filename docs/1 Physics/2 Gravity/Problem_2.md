@@ -32,12 +32,15 @@ These concepts are critical in designing satellite launches, interplanetary miss
 
 1. **First Cosmic Velocity**: The velocity required for an object to maintain a stable circular orbit around a celestial body.
    
-   $v_1 = \sqrt{\frac{G M}{r}}$
+    $$v_1 = \sqrt{\frac{G M}{r}}$$
    
-   where:
-   - $G$: Gravitational constant
-   - $M$: Mass of the celestial body
-   - $r$: Radius of the orbit (distance from the center of the body)
+   Where:
+
+   \- $(G)$: Gravitational constant
+
+   \- $(M)$: Mass of the celestial body
+
+   \- $(r)$: Radius of the orbit (distance from the center of the body)
 
 2 . **Second Cosmic Velocity (Escape Velocity)**: The velocity required to escape the gravitational field of a celestial body.
 
@@ -47,27 +50,27 @@ These concepts are critical in designing satellite launches, interplanetary miss
    
    $$ v_3 = \sqrt{v_2^2 + \frac{2 G M_{\text{star}}}{r}} $$
    
-   where $M_{\text{star}}$ is the mass of the central star.
+   Where $M_{\text{star}}$ is the mass of the central star.
 
 ---
 
 ## 2. Mathematical Analysis
 
 ### Parameters Influencing Cosmic Velocities
-- **Mass $\( M \)$**: Higher mass increases the gravitational pull, raising all three velocities.
+\- **Mass $( M )$**: Higher mass increases the gravitational pull, raising all three velocities.
 
-- **Radius $\( r \)$**: Greater distances from the center of the celestial body reduce the gravitational force, lowering the velocities.
+\- **Radius $( r )$**: Greater distances from the center of the celestial body reduce the gravitational force, lowering the velocities.
 
-- **Gravitational Constant $\( G \)$**: A universal constant influencing the strength of gravity.
+\- **Gravitational Constant $( G )$**: A universal constant influencing the strength of gravity.
 
 ### Calculations for Earth, Mars, and Jupiter
 
 #### Example Values:
-- Earth: $\( M = 5.972 \times 10^{24} \ \text{kg}, r = 6.371 \times 10^{6} \ \text{m} \)$
+\- **Earth**: $( M = 5.972 \times 10^{24} \ \text{kg}, r = 6.371 \times 10^{6} \ \text{m} )$
 
-- Mars: $\( M = 6.39 \times 10^{23} \ \text{kg}, r = 3.39 \times 10^{6} \ \text{m} \)$
+\- **Mars**: $( M = 6.39 \times 10^{23} \ \text{kg}, r = 3.39 \times 10^{6} \ \text{m} )$
 
-- Jupiter: $\( M = 1.898 \times 10^{27} \ \text{kg}, r = 6.99 \times 10^{7} \ \text{m} \)$
+\- **Jupiter**: $( M = 1.898 \times 10^{27} \ \text{kg}, r = 6.99 \times 10^{7} \ \text{m} )$
 
 ---
 
@@ -135,17 +138,17 @@ plt.show()
 
 ### Importance in Space Exploration
 
- - **Launching Satellites**: The first cosmic velocity determines the minimum speed required for satellites to orbit Earth.
+ \- **Launching Satellites**: The first cosmic velocity determines the minimum speed required for satellites to orbit Earth.
 
- - **Interplanetary Missions**: The second cosmic velocity is critical for missions escaping Earth's gravitational pull, such as journeys to Mars.
+ \- **Interplanetary Missions**: The second cosmic velocity is critical for missions escaping Earth's gravitational pull, such as journeys to Mars.
 
- - **Interstellar Travel**: The third cosmic velocity underpins the feasibility of missions beyond our solar system.
+ \- **Interstellar Travel**: The third cosmic velocity underpins the feasibility of missions beyond our solar system.
 
 ### Limitations and Extensions
 
-- **Simplifications**: Assumes point masses and neglects factors like atmospheric drag or relativistic effects.
+\- **Simplifications**: Assumes point masses and neglects factors like atmospheric drag or relativistic effects.
 
-- **Extensions**: Explore scenarios with varying atmospheric densities or gravitational influences from multiple bodies.
+\- **Extensions**: Explore scenarios with varying atmospheric densities or gravitational influences from multiple bodies.
 
 Understanding cosmic velocities is not only a theoretical exercise but also a practical necessity in advancing humanity's reach into space. 
 
