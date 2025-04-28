@@ -172,6 +172,117 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<hr/>
+<h1 id="equivalent-resistance-using-graph-theory">Equivalent Resistance Using Graph Theory</h1>
+<hr/>
+<h2 id="11-motivation">1.1 Motivation</h2>
+<p>Calculating equivalent resistance is a fundamental problem in electrical circuits, essential for designing and analyzing efficient systems. </p>
+<p>Traditional methods involve applying series and parallel resistor rules iteratively, but these approaches become complex for large networks. </p>
+<p>Graph theory provides a systematic approach by representing circuits as graphs, where nodes correspond to junctions and edges represent resistors with weights equal to their resistance values.</p>
+<p>By leveraging graph-based methods, we can automate circuit analysis, making it useful for simulation software, optimization problems, and network design. </p>
+<p>This approach also showcases the deep connection between electrical engineering and mathematical graph theory.</p>
+<hr/>
+<h2 id="12-problem-statement">1.2 Problem Statement</h2>
+<p>- Given an electrical circuit modeled as a weighted graph, compute the equivalent resistance between two nodes using graph theory. </p>
+<p>- The circuit may contain arbitrary resistor configurations, including nested series and parallel connections.</p>
+<hr/>
+<h2 id="2-approach">2. Approach</h2>
+<hr/>
+<h3 id="21-graph-representation">2.1 Graph Representation</h3>
+<p>- <strong>Nodes</strong>: Represent electrical junctions.</p>
+<p>- <strong>Edges</strong>: Represent resistors with weights equal to their resistance values.</p>
+<h3 id="22-graph-simplification">2.2 Graph Simplification</h3>
+<p><span class="arithmatex">\(1.\)</span> <strong>Identify Series Connections</strong>:</p>
+<p>- If two resistors share a common node with no branching, they are in series.</p>
+<p>- <strong>Combine them using</strong>:</p>
+<div class="arithmatex">\[
+   R_{eq} = R_1 + R_2
+\]</div>
+<p><span class="arithmatex">\(2.\)</span> <strong>Identify Parallel Connections</strong>:</p>
+<p>- If two resistors connect the same pair of nodes, they are in parallel.</p>
+<p>- <strong>Combine them using</strong>:</p>
+<p>$$
+    \frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2}
+ $$</p>
+<p><span class="arithmatex">\(3.\)</span> <strong>Iterative Reduction</strong>:</p>
+<p>- Apply the above rules iteratively until the circuit reduces to a single equivalent resistance.</p>
+<hr/>
+<h2 id="3-algorithm-implementation">3. Algorithm Implementation</h2>
+<h3 id="31-pseudocode">3.1 Pseudocode</h3>
+<pre><code>function compute_equivalent_resistance(graph, start, end):
+    while graph has more than two nodes:
+        for each node in graph:
+            if node has exactly two neighbors (series case):
+                merge series resistances
+            if two nodes have multiple edges (parallel case):
+                merge parallel resistances
+    return remaining edge weight between start and end
+</code></pre>
+<h3 id="32-python-implementation">3.2 Python Implementation</h3>
+<pre><code class="language-python">import networkx as nx
+
+def parallel_resistance(resistances):
+    return 1 / sum(1 / r for r in resistances)
+
+def reduce_circuit(graph):
+    changed = True
+    while changed:
+        changed = False
+        for node in list(graph.nodes):
+            neighbors = list(graph.neighbors(node))
+            if len(neighbors) == 2:  # Series Case
+                n1, n2 = neighbors
+                r1 = graph[node][n1]['weight']
+                r2 = graph[node][n2]['weight']
+                graph.add_edge(n1, n2, weight=r1 + r2)
+                graph.remove_node(node)
+                changed = True
+                break
+
+        for (u, v) in list(graph.edges):  # Parallel Case
+            parallel_edges = [d['weight'] for _, _, d in graph.edges(data=True) if _ == u and v == _]
+            if len(parallel_edges) &gt; 1:
+                graph[u][v]['weight'] = parallel_resistance(parallel_edges)
+                changed = True
+
+    return graph
+
+# Example circuit
+G = nx.Graph()
+G.add_edge('A', 'B', weight=4)
+G.add_edge('B', 'C', weight=6)
+G.add_edge('C', 'A', weight=3)
+G.add_edge('B', 'D', weight=2)
+G.add_edge('C', 'D', weight=1)
+
+G = reduce_circuit(G)
+print("Equivalent Resistance between A and D:", G['A']['D']['weight'])
+</code></pre>
+<hr/>
+<p><img alt="Alt text" src="../image-1.png"/></p>
+<h2 id="4-analysis">4. Analysis</h2>
+<h3 id="41-test-cases">4.1 Test Cases</h3>
+<p><span class="arithmatex">\(1.\)</span> <strong>Simple Series-Parallel Network</strong>:</p>
+<p>- <strong>Input</strong>: Resistors in a simple combination.</p>
+<p>- <strong>Output</strong>: Correct equivalent resistance.</p>
+<p><span class="arithmatex">\(2.\)</span> <strong>Nested Combinations</strong>:</p>
+<p>- <strong>Input</strong>: Complex network with multiple levels of simplification.</p>
+<p>- <strong>Output</strong>: Consistent resistance calculation.</p>
+<p><span class="arithmatex">\(3.\)</span> <strong>General Graph with Cycles</strong>:</p>
+<p>- <strong>Input</strong>: Arbitrary circuit.</p>
+<p>- <strong>Output</strong>: Correct reduction using iterative merging.</p>
+<h3 id="42-efficiency">4.2 Efficiency</h3>
+<p>- <strong>Series Reduction</strong>: <span class="arithmatex">\(O(N)\)</span> for <span class="arithmatex">\(N\)</span> nodes.</p>
+<p>- <strong>Parallel Reduction</strong>: <span class="arithmatex">\(O(E)\)</span> for <span class="arithmatex">\(E\)</span> edges.</p>
+<p>- <strong>Total Complexity</strong>: Near <span class="arithmatex">\(O(N + E)\)</span> in practical cases due to iterative graph simplifications.</p>
+<h3 id="43-possible-improvements">4.3 Possible Improvements</h3>
+<p>- Implementing more efficient graph traversal techniques <strong>(DFS/BFS)</strong> to detect reducible structures quickly.</p>
+<p>- Optimizing data structures for faster merging operations.</p>
+<hr/>
+<h2 id="5-conclusion">5. Conclusion</h2>
+<p>- Using graph theory, we successfully computed the equivalent resistance of an electrical circuit through iterative graph reductions. </p>
+<p>- This approach provides a structured, algorithmic way to analyze circuits, making it valuable for simulations and automated circuit analysis tools.</p>
+<p>- By combining fundamental electrical principles with graph-theoretic techniques, we bridge the gap between physics, engineering, and computer science, demonstrating the power of       interdisciplinary problem-solving.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
