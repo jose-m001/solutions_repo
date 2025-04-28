@@ -126,66 +126,86 @@ Below is a Python script to simulate and visualize the motion of a forced damped
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 from scipy.integrate import solve_ivp
 
+  # Computing the derivatives for the forced damped pendulum.
 def forced_damped_pendulum(t, y, beta, omega_0, A, omega):
+
     theta, omega_theta = y
     dtheta_dt = omega_theta
     domega_dt = -beta * omega_theta - omega_0**2 * np.sin(theta) + A * np.cos(omega * t)
     return [dtheta_dt, domega_dt]
 
+   # Simulates the forced damped pendulum.
 def simulate_pendulum(beta, omega_0, A, omega, theta0, omega_theta0, t_span, t_eval):
-    # Initial conditions
+ 
     y0 = [theta0, omega_theta0]
-
-    # Solve ODE
     sol = solve_ivp(forced_damped_pendulum, t_span, y0, t_eval=t_eval, args=(beta, omega_0, A, omega))
+    if not sol.success:
+        raise RuntimeError("ODE solver failed.")
     return sol.t, sol.y
 
+  # Plot of the phase portrait of the pendulum.
 def plot_phase_portrait(theta, omega_theta):
+   
     plt.figure(figsize=(8, 6))
-    plt.plot(theta, omega_theta, label="Phase Portrait")
-    plt.xlabel("Angular Displacement (theta)")
-    plt.ylabel("Angular Velocity (omega_theta)")
+    plt.plot(theta, omega_theta, color="teal", lw=1.2)
+    plt.xlabel("Angular Displacement (θ)")
+    plt.ylabel("Angular Velocity (ω)")
     plt.title("Phase Portrait of Forced Damped Pendulum")
     plt.grid()
-    plt.legend()
     plt.show()
 
+  # Plots the time series of angular displacement.
 def plot_time_series(t, theta):
+   
     plt.figure(figsize=(10, 6))
-    plt.plot(t, theta, label="Theta vs Time")
+    plt.plot(t, theta, color="purple", lw=1.2)
     plt.xlabel("Time (s)")
-    plt.ylabel("Angular Displacement (theta)")
+    plt.ylabel("Angular Displacement (θ)")
     plt.title("Time Series of Forced Damped Pendulum")
     plt.grid()
-    plt.legend()
+    plt.show()
+
+    # 3D Plot of phase with time as the third axis.
+def plot_3d_phase(t, theta, omega_theta):
+   
+    fig = plt.figure(figsize=(10, 7))
+    ax = fig.add_subplot(111, projection='3d')
+    ax.plot(theta, omega_theta, t, color="navy", lw=1.2)
+    ax.set_xlabel("Angular Displacement (θ)")
+    ax.set_ylabel("Angular Velocity (ω)")
+    ax.set_zlabel("Time (s)")
+    ax.set_title("3D Phase Plot of Forced Damped Pendulum")
     plt.show()
 
 # Parameters
-beta = 0.5       # Damping coefficient
-omega_0 = 1.5    # Natural frequency
-A = 1.2          # Driving amplitude
-omega = 0.8      # Driving frequency
-theta0 = 0.2     # Initial displacement (radians)
-omega_theta0 = 0 # Initial angular velocity
-t_span = (0, 50) # Time span for simulation
-t_eval = np.linspace(t_span[0], t_span[1], 1000)
+params = {
+    "beta": 0.5,       # Damping coefficient
+    "omega_0": 1.5,    # Natural frequency
+    "A": 1.2,          # Driving amplitude
+    "omega": 0.8,      # Driving frequency
+    "theta0": 0.2,     # Initial displacement (radians)
+    "omega_theta0": 0, # Initial angular velocity
+    "t_span": (0, 50), # Time span for simulation
+    "t_eval": np.linspace(0, 50, 2000) # Time points for evaluation
+}
 
 # Simulate
-t, y = simulate_pendulum(beta, omega_0, A, omega, theta0, omega_theta0, t_span, t_eval)
-
-# Extract results
+t, y = simulate_pendulum(**params)
 theta, omega_theta = y
 
-# Plot results
+# Visualize
 plot_time_series(t, theta)
 plot_phase_portrait(theta, omega_theta)
+plot_3d_phase(t, theta, omega_theta)
+
 ```
 
-![Alt text](image-2.png)
-
-
+![Alt text](image-3.png)
+![Alt text](image-4.png)
+![Alt text](image-5.png)
 ---
 
 # 5. Discussion
