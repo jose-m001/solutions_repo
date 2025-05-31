@@ -120,10 +120,10 @@ G.add_edge('C', 'D', weight=1)
 G = reduce_circuit(G)
 print("Equivalent Resistance between A and D:", G['A']['D']['weight'])
 ```
-
 ---
 
-![Alt text](image-1.png)
+![Alt text](image-2.png)
+
 
 ## 4. Analysis
 
