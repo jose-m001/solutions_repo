@@ -176,22 +176,26 @@
 <h2 id="motivation">Motivation</h2>
 <p>The acceleration <span class="arithmatex">\(g\)</span> due to gravity is a fundamental physical constant that governs the motion of objects in a gravitational field. This experiment explores how a simple pendulum can be used to determine <span class="arithmatex">\(g\)</span> accurately, emphasizing the importance of precise measurements and uncertainty analysis in experimental physics.</p>
 <hr/>
-<h2 id="procedure">Procedure</h2>
-<h3 id="materials">Materials</h3>
+<h2 id="deliverables">Deliverables</h2>
+<h3 id="calculations-and-results">Calculations and Results</h3>
 <ul>
 <li>
-<p>A string (1 or 1.5 meters long)</p>
+<p>Mean period: <span class="arithmatex">\(\overline{T}_{10}\)</span></p>
 </li>
 <li>
-<p>A small weight (e.g., bag of coins, bag of sugar, key chain)</p>
+<p>Period of one oscillation: <span class="arithmatex">\(T \pm \Delta T\)</span></p>
 </li>
 <li>
-<p>Stopwatch or smartphone timer</p>
-</li>
-<li>
-<p>Ruler or measuring tape</p>
+<p>Measured <span class="arithmatex">\(g \pm \Delta g\)</span></p>
 </li>
 </ul>
+<hr/>
+<h2 id="procedure">Procedure</h2>
+<h3 id="materials">Materials</h3>
+<p>- A string (1 or 1.5 meters long)</p>
+<p>- A small weight (e.g., bag of coins, bag of sugar, key chain)</p>
+<p>- Stopwatch or smartphone timer</p>
+<p>- Ruler or measuring tape</p>
 <h3 id="setup">Setup</h3>
 <p><span class="arithmatex">\(1\)</span>. Attach the weight to the string and secure the other end to a sturdy support.</p>
 <p><span class="arithmatex">\(2\)</span>. Measure the length of the pendulum, <span class="arithmatex">\(L\)</span>, from the suspension point to the center of the weight using a ruler or measuring tape.</p>
@@ -199,23 +203,13 @@
 <p>- Calculate the uncertainty in <span class="arithmatex">\(L\)</span> as half the resolution: </p>
 <p>$$ \Delta L = \frac{\text{Resolution}} {2}$$</p>
 <h3 id="data-collection">Data Collection</h3>
-<ol>
-<li>Displace the pendulum slightly (<span class="arithmatex">\(&lt;15^\circ\)</span>) and release it.</li>
-<li>Measure the time for 10 full oscillations (<span class="arithmatex">\(T_{10}\)</span>) using a stopwatch. Record the time to the nearest resolution of the stopwatch.</li>
-<li>Repeat the measurement 10 times to obtain 10 values of <span class="arithmatex">\(T_{10}\)</span>.</li>
-<li>
-<p>Calculate:</p>
-</li>
-<li>
-<p>The mean time for 10 oscillations: <span class="arithmatex">\(\overline{T}_{10} = \frac{\sum T_{10}}{10}\)</span>.</p>
-</li>
-<li>
-<p>The standard deviation: <span class="arithmatex">\(\sigma_{T_{10}} = \sqrt{\frac{\sum (T_{10} - \overline{T}_{10})^2}{n - 1}}\)</span>, where <span class="arithmatex">\(n = 10\)</span>.</p>
-</li>
-<li>
-<p>The uncertainty in the mean: <span class="arithmatex">\(\Delta \overline{T}_{10} = \frac{\sigma_{T_{10}}}{\sqrt{n}}\)</span>.</p>
-</li>
-</ol>
+<p><span class="arithmatex">\(1\)</span>. Displace the pendulum slightly (<span class="arithmatex">\(&lt;15^\circ\)</span>) and release it.</p>
+<p><span class="arithmatex">\(2\)</span>. Measure the time for 10 full oscillations (<span class="arithmatex">\(T_{10}\)</span>) using a stopwatch. </p>
+<p><span class="arithmatex">\(3\)</span>. Repeat the measurement 10 times to obtain 10 values of <span class="arithmatex">\(T_{10}\)</span>.</p>
+<p><span class="arithmatex">\(4\)</span>. Calculate:</p>
+<p>- The mean time for 10 oscillations: <span class="arithmatex">\(\overline{T}_{10} = \frac{\sum T_{10}}{10}\)</span>.</p>
+<p>- The standard deviation: <span class="arithmatex">\(\sigma_{T_{10}} = \sqrt{\frac{\sum (T_{10} - \overline{T}_{10})^2}{n - 1}}\)</span>, where <span class="arithmatex">\(n = 10\)</span>.</p>
+<p>- The uncertainty in the mean: <span class="arithmatex">\(\Delta \overline{T}_{10} = \frac{\sigma_{T_{10}}}{\sqrt{n}}\)</span>.</p>
 <hr/>
 <h2 id="calculations">Calculations</h2>
 <h3 id="1-calculate-the-period">1. Calculate the Period</h3>
@@ -287,78 +281,14 @@ plt.show()
 </code></pre>
 <p><img alt="Alt text" src="../image.png"/></p>
 <h2 id="analysis">Analysis</h2>
-<h3 id="1-compare-measured-g-with-the-standard-value">1. Compare Measured <span class="arithmatex">\(g\)</span> with the Standard Value</h3>
-<p>Compare your experimental value of <span class="arithmatex">\(g\)</span> with the standard value <span class="arithmatex">\(g_{\text{standard}} = 9.81 \, \text{m/s}^2\)</span>.</p>
-<h3 id="2-discussion">2. Discussion</h3>
-<ul>
-<li>
-<p><strong>Effect of Measurement Resolution on <span class="arithmatex">\(g\)</span>:</strong>
-  Explore how the precision of <span class="arithmatex">\(L\)</span> and <span class="arithmatex">\(T_{10}\)</span> affects the final uncertainty in <span class="arithmatex">\(g\)</span>.</p>
-</li>
-<li>
-<p><strong>Variability in Timing:</strong>
-  Discuss the variability in <span class="arithmatex">\(T_{10}\)</span> measurements and its impact on the mean period and uncertainty.</p>
-</li>
-<li>
-<p><strong>Assumptions and Limitations:</strong></p>
-</li>
-<li>
-<p>Assume air resistance and friction at the pivot are negligible.</p>
-</li>
-<li>Small-angle approximation (<span class="arithmatex">\(&lt;15^\circ\)</span>) is used to ensure the formula for <span class="arithmatex">\(g\)</span> is valid.</li>
-</ul>
+<p>- Compare your experimental value of <span class="arithmatex">\(g\)</span> with the standard value <span class="arithmatex">\(9.81 \, \text{m/s}^2\)</span>.</p>
+<p>- Explore how the precision of <span class="arithmatex">\(L\)</span> and <span class="arithmatex">\(T_{10}\)</span> affects the final uncertainty in g.</p>
+<p>- Discuss the variability in <span class="arithmatex">\(T_{10}\)</span> measurements and its impact on the mean period and uncertainty.</p>
+<h2 id="discussion">Discussion</h2>
+<p>* <strong>Assumptions and Limitations:</strong></p>
+<p>* Assume air resistance and friction at the pivot are negligible.</p>
+<p>* Small-angle approximation (<span class="arithmatex">\(&lt;15^\circ\)</span>) is used to ensure the formula for <span class="arithmatex">\(g\)</span> is valid.</p>
 <hr/>
-<h2 id="deliverables">Deliverables</h2>
-<h3 id="tabulated-data">Tabulated Data</h3>
-<table>
-<thead>
-<tr>
-<th>Trial</th>
-<th><span class="arithmatex">\(T_{10} \, (\text{s})\)</span></th>
-<th>Deviation from Mean (<span class="arithmatex">\(T_{10} - \overline{T}_{10}\)</span>)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>...</td>
-<td>...</td>
-</tr>
-<tr>
-<td>2</td>
-<td>...</td>
-<td>...</td>
-</tr>
-<tr>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-</tr>
-<tr>
-<td>10</td>
-<td>...</td>
-<td>...</td>
-</tr>
-<tr>
-<td><strong>Mean <span class="arithmatex">\(\overline{T}_{10}\)</span>:</strong></td>
-<td><strong>...</strong></td>
-<td><strong>...</strong></td>
-</tr>
-<tr>
-<td><strong>Standard Deviation <span class="arithmatex">\(\sigma_{T_{10}}\)</span>:</strong></td>
-<td><strong>...</strong></td>
-<td><strong>...</strong></td>
-</tr>
-</tbody>
-</table>
-<h3 id="calculations-and-results">Calculations and Results</h3>
-<ul>
-<li>Mean period: <span class="arithmatex">\(\overline{T}_{10}\)</span></li>
-<li>Period of one oscillation: <span class="arithmatex">\(T \pm \Delta T\)</span></li>
-<li>Measured <span class="arithmatex">\(g \pm \Delta g\)</span></li>
-</ul>
-<h3 id="discussion">Discussion</h3>
-<p>Provide insights into the sources of uncertainty, their propagation, and their influence on the accuracy of <span class="arithmatex">\(g\)</span>. Highlight potential improvements for future experiments.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
