@@ -167,9 +167,9 @@ plt.show()
 
 ## Explanation of the Code
 
-\- **Wave_displacement**: This function computes the displacement at a given point $𝑟$ due to a wave source at $𝑟_i$,using the wave equation.
+\- **Wave displacement**: This function computes the displacement at a given point $𝑟$ due to a wave source at $𝑟_i$,using the wave equation.
 
-\- **Polygon_sources**: This function calculates the positions of the wave sources placed at the vertices of a regular polygon.
+\- **Polygon sources**: This function calculates the positions of the wave sources placed at the vertices of a regular polygon.
 
 \- **Superposition**: For each point on the grid, we sum the displacements due to all wave sources to get the total displacement.
 

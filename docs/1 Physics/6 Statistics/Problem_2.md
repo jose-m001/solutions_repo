@@ -145,8 +145,8 @@ plt.legend()
 plt.grid()
 plt.show()
 ```
-
 ![Alt text](image-2.png)
+
 
 ### Analysis
 \- Investigate how the number of needle drops affects the estimate’s accuracy.

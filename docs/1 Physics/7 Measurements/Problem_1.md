@@ -8,17 +8,31 @@ The acceleration $g$ due to gravity is a fundamental physical constant that gove
 
 ---
 
+
+## Deliverables
+                                     
+
+### Calculations and Results
+
+* Mean period: $\overline{T}_{10}$
+
+* Period of one oscillation: $T \pm \Delta T$
+
+* Measured $g \pm \Delta g$
+
+---
+
 ## Procedure
 
 ### Materials
 
-* A string (1 or 1.5 meters long)
+\- A string (1 or 1.5 meters long)
 
-* A small weight (e.g., bag of coins, bag of sugar, key chain)
+\- A small weight (e.g., bag of coins, bag of sugar, key chain)
 
-* Stopwatch or smartphone timer
+\- Stopwatch or smartphone timer
 
-* Ruler or measuring tape
+\- Ruler or measuring tape
 
 ### Setup
 
@@ -36,16 +50,19 @@ The acceleration $g$ due to gravity is a fundamental physical constant that gove
 
 ### Data Collection
 
-1. Displace the pendulum slightly ($<15^\circ$) and release it.
-2. Measure the time for 10 full oscillations ($T_{10}$) using a stopwatch. Record the time to the nearest resolution of the stopwatch.
-3. Repeat the measurement 10 times to obtain 10 values of $T_{10}$.
-4. Calculate:
+\(1\). Displace the pendulum slightly ($<15^\circ$) and release it.
 
-   * The mean time for 10 oscillations: $\overline{T}_{10} = \frac{\sum T_{10}}{10}$.
+\(2\). Measure the time for 10 full oscillations ($T_{10}$) using a stopwatch. 
 
-   * The standard deviation: $\sigma_{T_{10}} = \sqrt{\frac{\sum (T_{10} - \overline{T}_{10})^2}{n - 1}}$, where $n = 10$.
+\(3\). Repeat the measurement 10 times to obtain 10 values of $T_{10}$.
 
-   * The uncertainty in the mean: $\Delta \overline{T}_{10} = \frac{\sigma_{T_{10}}}{\sqrt{n}}$.
+\(4\). Calculate:
+
+   \- The mean time for 10 oscillations: $\overline{T}_{10} = \frac{\sum T_{10}}{10}$.
+
+   \- The standard deviation: $\sigma_{T_{10}} = \sqrt{\frac{\sum (T_{10} - \overline{T}_{10})^2}{n - 1}}$, where $n = 10$.
+
+   \- The uncertainty in the mean: $\Delta \overline{T}_{10} = \frac{\sigma_{T_{10}}}{\sqrt{n}}$.
 
 ---
 
@@ -141,44 +158,19 @@ plt.show()
 
 ## Analysis
 
-### 1. Compare Measured $g$ with the Standard Value
+\- Compare your experimental value of $g$ with the standard value $9.81 \, \text{m/s}^2$.
 
-Compare your experimental value of $g$ with the standard value $g_{\text{standard}} = 9.81 \, \text{m/s}^2$.
+\- Explore how the precision of $L$ and $T_{10}$ affects the final uncertainty in g.
 
-### 2. Discussion
+\- Discuss the variability in $T_{10}$ measurements and its impact on the mean period and uncertainty.
 
-* **Effect of Measurement Resolution on $g$:**
-  Explore how the precision of $L$ and $T_{10}$ affects the final uncertainty in $g$.
+## Discussion
 
-* **Variability in Timing:**
-  Discuss the variability in $T_{10}$ measurements and its impact on the mean period and uncertainty.
+\* **Assumptions and Limitations:**
 
-* **Assumptions and Limitations:**
+  \* Assume air resistance and friction at the pivot are negligible.
 
-  * Assume air resistance and friction at the pivot are negligible.
-  * Small-angle approximation ($<15^\circ$) is used to ensure the formula for $g$ is valid.
+  \* Small-angle approximation ($<15^\circ$) is used to ensure the formula for $g$ is valid.
+  
 
 ---
-
-## Deliverables
-
-### Tabulated Data
-
-| Trial                                     | $T_{10} \, (\text{s})$ | Deviation from Mean ($T_{10} - \overline{T}_{10}$) |
-| ----------------------------------------- | ---------------------- | -------------------------------------------------- |
-| 1                                         | ...                    | ...                                                |
-| 2                                         | ...                    | ...                                                |
-| ...                                       | ...                    | ...                                                |
-| 10                                        | ...                    | ...                                                |
-| **Mean $\overline{T}_{10}$:**             | **...**                | **...**                                            |
-| **Standard Deviation $\sigma_{T_{10}}$:** | **...**                | **...**                                            |
-
-### Calculations and Results
-
-* Mean period: $\overline{T}_{10}$
-* Period of one oscillation: $T \pm \Delta T$
-* Measured $g \pm \Delta g$
-
-### Discussion
-
-Provide insights into the sources of uncertainty, their propagation, and their influence on the accuracy of $g$. Highlight potential improvements for future experiments.

@@ -79,7 +79,36 @@ exponential_population = np.random.exponential(1, population_size)
 sample_sizes = [5, 10, 30, 50]
 
 # Visualization
-for population, label in zip([uniform_population, exponential_population], ["Uniform", "Exponential"]):
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Function to simulate sampling distribution
+def simulate_clt(population, sample_size, num_samples):
+    sample_means = []
+    for _ in range(num_samples):
+        sample = np.random.choice(population, size=sample_size, replace=True)
+        sample_means.append(np.mean(sample))
+    return sample_means
+
+# Parameters
+np.random.seed(42)  
+population_size = 100000
+num_samples = 1000
+
+# Population distributions
+uniform_population = np.random.uniform(0, 1, population_size)
+exponential_population = np.random.exponential(1, population_size)
+binomial_population = np.random.binomial(n=10, p=0.5, size=population_size)
+
+# Sampling parameters
+sample_sizes = [5, 10, 30, 50]
+
+# Visualization
+for population, label in zip(
+    [uniform_population, exponential_population, binomial_population], 
+    ["Uniform", "Exponential", "Binomial"]
+):
     plt.figure(figsize=(14, 10))
     for i, sample_size in enumerate(sample_sizes, 1):
         sample_means = simulate_clt(population, sample_size, num_samples)
@@ -90,8 +119,12 @@ for population, label in zip([uniform_population, exponential_population], ["Uni
         plt.ylabel("Frequency")
     plt.tight_layout()
     plt.show()
+
 ```
-![Alt text](image.png)
+
+![Alt text](image-5.png)
+![Alt text](image-4.png)
+![Alt text](image-3.png)
 
 
 
